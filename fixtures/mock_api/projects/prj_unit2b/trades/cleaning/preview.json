@@ -1,0 +1,47 @@
+{
+  "project_id": "prj_unit2b",
+  "trade": "cleaning",
+  "contact": {
+    "trade": "cleaning",
+    "company": "Spotless Final Clean",
+    "contact": "Rosa Alvarez",
+    "email": "rosa.alvarez@example.com",
+    "phone": "(555) 010-2203",
+    "slack_channel": null,
+    "has_slack_webhook": false
+  },
+  "channel": "email",
+  "channel_reason": "Emails rosa.alvarez@example.com.",
+  "effective_channel": "email",
+  "effective_channel_label": "Emails rosa.alvarez@example.com.",
+  "channels": [
+    {
+      "channel": "email",
+      "available": true,
+      "destination": "rosa.alvarez@example.com",
+      "reason": null,
+      "label": "Emails rosa.alvarez@example.com."
+    },
+    {
+      "channel": "outbox",
+      "available": true,
+      "destination": "Copy link",
+      "reason": null,
+      "label": "Copy a link to share."
+    }
+  ],
+  "to_review": [
+    {
+      "item_id": "itm_2b_02",
+      "number": 2,
+      "title": "Coffee drips on counter"
+    }
+  ],
+  "already_sent": [],
+  "heading": "Unit 2B final punch: 0 cleaning items",
+  "lines": [],
+  "subject": "Unit 2B final punch: 0 cleaning items",
+  "message_text": "Unit 2B final punch: 0 cleaning items\n",
+  "slack_text": "*Unit 2B final punch: 0 cleaning items*\n",
+  "item_ids": []
+}

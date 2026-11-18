@@ -1,0 +1,150 @@
+"""The Punchwalk FastAPI app: one service, one URL (API + media + the built PWA).
+
+    uv run uvicorn punchwalk.api.app:app --reload --port 8000     # make dev
+
+Startup (lifespan): create the SQLite (WAL) database under DATA_DIR, put jobs interrupted by a
+restart back in the queue, start the in-process job worker (`PUNCHWALK_WORKER=0` disables it), and,
+with DEMO_RESEED=true, the demo re-seed (boot + nightly at 03:00 America/New_York; api/reseed.py).
+"""
+
+from __future__ import annotations
+
+import logging
+import os
+import shutil
+import sys
+from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
+from datetime import UTC, datetime
+from pathlib import Path
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from sqlalchemy import text
+
+from punchwalk import __version__
+from punchwalk.api import schemas as S
+from punchwalk.api.errors import install_error_handlers
+from punchwalk.api.guards import BodySizeLimitMiddleware
+from punchwalk.api.jobs import recover_interrupted_jobs, start_worker, stop_worker
+from punchwalk.api.media import router as media_router
+from punchwalk.api.media import spa_router
+from punchwalk.api.reseed import start_reseed, stop_reseed
+from punchwalk.api.routes import insights, items, projects, trades, walks
+from punchwalk.config import get_settings
+from punchwalk.core.enums import ReasoningProvider
+from punchwalk.db import init_db, session_factory
+
+log = logging.getLogger("punchwalk.api")
+
+
+class _StderrHandler(logging.StreamHandler):
+    """Writes to whatever sys.stderr is at the time (uvicorn, pytest's capture, a redirected shell)."""
+
+    @property  # type: ignore[override]
+    def stream(self):
+        return sys.stderr
+
+    @stream.setter
+    def stream(self, _value) -> None:
+        pass
+
+
+def configure_logging() -> logging.Logger:
+    """`punchwalk.*` loggers (jobs, re-seed, dispatch) at INFO on stderr, next to uvicorn's own lines.
+
+    Uvicorn only configures its own loggers, so without this every `punchwalk` INFO line is dropped.
+    Idempotent: one handler, however often the app starts.
+    """
+    root = logging.getLogger("punchwalk")
+    root.setLevel(logging.INFO)
+    if not any(getattr(h, "_punchwalk", False) for h in root.handlers):
+        handler = _StderrHandler()
+        handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s"))
+        handler._punchwalk = True  # type: ignore[attr-defined]
+        root.addHandler(handler)
+    return root
+
+DEV_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
+    configure_logging()
+    init_db()
+    resumed = recover_interrupted_jobs()
+    if resumed:
+        log.info("re-queued %d job(s) interrupted by a restart", resumed)
+    start_worker()
+    start_reseed()
+    try:
+        yield
+    finally:
+        stop_reseed()
+        stop_worker()
+
+
+def create_app() -> FastAPI:
+    app = FastAPI(
+        title="Punchwalk",
+        version=__version__,
+        description="Turn a construction punch walk into a verified, dispatched punch list.",
+        lifespan=lifespan,
+    )
+    # Order: the last middleware added is the outermost, so CORS headers also go on 413s.
+    app.add_middleware(BodySizeLimitMiddleware)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=DEV_ORIGINS,
+        allow_methods=["*"],
+        allow_headers=["*"],
+        expose_headers=["Content-Range", "Accept-Ranges", "Content-Length"],
+    )
+    install_error_handlers(app)
+
+    @app.get("/healthz", response_model=S.HealthOut, tags=["health"])
+    def healthz() -> S.HealthOut:
+        settings = get_settings()
+        return S.HealthOut(
+            ok=True,
+            version=__version__,
+            demo_mode=settings.DEMO_MODE,
+            reasoning_provider=ReasoningProvider(settings.REASONING_PROVIDER),
+            time=datetime.now(UTC),
+        )
+
+    @app.get("/readyz", tags=["health"])
+    def readyz() -> JSONResponse:
+        """Can this instance actually process a walk? 200 only when every dependency is in place."""
+        settings = get_settings()
+        checks: dict[str, bool] = {}
+        try:
+            with session_factory() as s:
+                s.exec(text("SELECT 1"))
+            checks["database"] = True
+        except Exception:  # noqa: BLE001 - any failure means not ready
+            checks["database"] = False
+        checks["ffmpeg"] = shutil.which("ffmpeg") is not None
+        checks["data_dir_writable"] = os.access(settings.DATA_DIR, os.W_OK) if Path(settings.DATA_DIR).exists() else False
+        gemini = bool(settings.GEMINI_API_KEY.get_secret_value())
+        checks["reasoning_key"] = bool(settings.BASETEN_API_KEY.get_secret_value()) or gemini
+        checks["transcription_key"] = bool(settings.MODEL_API_KEY.get_secret_value()) or gemini
+        ok = all(checks.values())
+        # SAM is optional: without it there is no pointing and outlines are the model's own boxes.
+        return JSONResponse(
+            {"ready": ok, "checks": checks, "pointing_and_outlines": settings.sam_available},
+            status_code=200 if ok else 503,
+        )
+
+    app.include_router(projects.router)
+    app.include_router(trades.router)
+    app.include_router(walks.router)
+    app.include_router(items.router)
+    app.include_router(insights.router)
+    app.include_router(media_router)
+    app.include_router(spa_router)  # last: catch-all for the PWA's client-side routes
+    return app
+
+
+app = create_app()

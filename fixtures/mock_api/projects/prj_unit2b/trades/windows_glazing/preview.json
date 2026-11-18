@@ -1,0 +1,51 @@
+{
+  "project_id": "prj_unit2b",
+  "trade": "windows_glazing",
+  "contact": {
+    "trade": "windows_glazing",
+    "company": "Clearview Glass",
+    "contact": "Ana Kowalski",
+    "email": null,
+    "phone": "(555) 010-2207",
+    "slack_channel": "#punch-glazing",
+    "has_slack_webhook": true
+  },
+  "channel": "slack",
+  "channel_reason": "Posts to #punch-glazing.",
+  "effective_channel": "slack",
+  "effective_channel_label": "Posts to #punch-glazing.",
+  "channels": [
+    {
+      "channel": "slack",
+      "available": true,
+      "destination": "#punch-glazing",
+      "reason": null,
+      "label": "Posts to #punch-glazing."
+    },
+    {
+      "channel": "outbox",
+      "available": true,
+      "destination": "Copy link",
+      "reason": null,
+      "label": "Copy a link to share."
+    }
+  ],
+  "to_review": [],
+  "already_sent": [],
+  "heading": "Unit 2B final punch: 1 windows & glazing item",
+  "lines": [
+    {
+      "item_id": "itm_2b_09",
+      "number": 9,
+      "title": "Window screen missing",
+      "line": "Living room, left window. Install the window screen.",
+      "url": "/share/item/shr_7d43c2adb3"
+    }
+  ],
+  "subject": "Unit 2B final punch: 1 windows & glazing item",
+  "message_text": "Unit 2B final punch: 1 windows & glazing item\n\n9. Window screen missing\nLiving room, left window. Install the window screen.\nView item and video: https://punchwalk.example.com/share/item/shr_7d43c2adb3\n",
+  "slack_text": "*Unit 2B final punch: 1 windows & glazing item*\n\n*9*  Window screen missing\nLiving room, left window. Install the window screen.\n<https://punchwalk.example.com/share/item/shr_7d43c2adb3|View item and video>\n",
+  "item_ids": [
+    "itm_2b_09"
+  ]
+}

@@ -1,0 +1,48 @@
+# secrets
+.env
+.env.local
+.claude/settings.local.json
+
+# data and media (raw footage never goes in git)
+data/
+footage/*
+!footage/README.md
+.verify/
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# web
+node_modules/
+web/dist/
+punchwalk/static/
+playwright-report/
+test-results/
+
+# misc
+.DS_Store
+*.log
+
+# seed snapshots (scripts/seed.py --export): uploaded to Fly with sftp, never committed
+demo/*.tar.gz
+
+# build-process and human-facing files (kept locally, not published)
+HUMAN_TODO.md
+FOOTAGE.md
+docs/DEMO_SCRIPT.md
+PLAN.md
+STATE.md
+PROGRESS.md
+DECISIONS.md
+BACKLOG.md
+CLAUDE.md
+.claude/
+scripts/orchestrate.sh
+
+# submission notes (local only)
+SUBMISSION.md

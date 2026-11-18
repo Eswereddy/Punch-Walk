@@ -1,0 +1,72 @@
+{
+  "token": "shr_7d43c2adb3",
+  "project_name": "Unit 2B final punch",
+  "project_address": "418 Alder Street, Unit 2B",
+  "number": 9,
+  "title": "Window screen missing",
+  "description": "The left living room window has no screen.",
+  "action": "Install the window screen",
+  "trade": "windows_glazing",
+  "company": "Clearview Glass",
+  "room": "Living room",
+  "location_detail": "Left window",
+  "severity": "functional",
+  "status": "open",
+  "quote": "Window screen's missing on the left window.",
+  "quote_start_s": 139.0,
+  "quote_end_s": 142.2,
+  "video_url": "/media/walks/wlk_2b_first/display.mp4",
+  "video_start_s": 137.0,
+  "video_end_s": 143.2,
+  "evidence": {
+    "t": 140.65,
+    "image_url": "/media/items/itm_2b_09/evidence.jpg",
+    "raw_url": "/media/items/itm_2b_09/frame.jpg",
+    "crop_url": "/media/items/itm_2b_09/crop.jpg",
+    "width": 1080,
+    "height": 1920,
+    "defect_svg": "M229 323 L819 323 L819 1293 L229 1293 Z",
+    "defect_box": {
+      "x1": 229.3,
+      "y1": 322.6,
+      "x2": 819.3,
+      "y2": 1292.6
+    },
+    "crop_box": {
+      "x1": 0.0,
+      "y1": 470.5,
+      "x2": 1080.0,
+      "y2": 1280.5
+    },
+    "pointer": {
+      "x": 655.5,
+      "y": 1358.4
+    },
+    "pointing_frame": "/media/items/itm_2b_09/pointing.jpg",
+    "hand_box": {
+      "x1": 618.2,
+      "y1": 1345.0,
+      "x2": 900.6,
+      "y2": 1920.0
+    },
+    "grounding": "sam_box",
+    "sam_concept": "window"
+  },
+  "closure": {
+    "rewalk_id": "wlk_2b_rewalk",
+    "rewalk_turn_id": "trn_2b2_15",
+    "quote": "Window screen, still missing.",
+    "after_t": 89.95,
+    "before_image_url": "/media/items/itm_2b_09/crop.jpg",
+    "after_image_url": "/media/items/itm_2b_09/after.jpg",
+    "after_frame_url": "/media/items/itm_2b_09/after_frame.jpg",
+    "before_after_url": null,
+    "voice_status": "not_fixed",
+    "vision_status": "still_visible",
+    "decision": "still_open",
+    "note": "Said not fixed, and the defect is still visible.",
+    "decided_at": "2026-11-04T13:21:15.800000Z"
+  },
+  "walked_at": "2026-11-03T15:12:00Z",
+  "after_at": "2026-11-04T13:05:00Z"
+}

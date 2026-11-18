@@ -1,0 +1,41 @@
+{
+  "project_id": "prj_unit2b",
+  "trade": "plumbing",
+  "contact": {
+    "trade": "plumbing",
+    "company": "Riverside Plumbing",
+    "contact": "Joe Lindqvist",
+    "email": "joe.lindqvist@example.com",
+    "phone": "(555) 010-2208",
+    "slack_channel": null,
+    "has_slack_webhook": false
+  },
+  "channel": "email",
+  "channel_reason": "Emails joe.lindqvist@example.com.",
+  "effective_channel": "email",
+  "effective_channel_label": "Emails joe.lindqvist@example.com.",
+  "channels": [
+    {
+      "channel": "email",
+      "available": true,
+      "destination": "joe.lindqvist@example.com",
+      "reason": null,
+      "label": "Emails joe.lindqvist@example.com."
+    },
+    {
+      "channel": "outbox",
+      "available": true,
+      "destination": "Copy link",
+      "reason": null,
+      "label": "Copy a link to share."
+    }
+  ],
+  "to_review": [],
+  "already_sent": [],
+  "heading": "Unit 2B final punch: 0 plumbing items",
+  "lines": [],
+  "subject": "Unit 2B final punch: 0 plumbing items",
+  "message_text": "Unit 2B final punch: 0 plumbing items\n",
+  "slack_text": "*Unit 2B final punch: 0 plumbing items*\n",
+  "item_ids": []
+}

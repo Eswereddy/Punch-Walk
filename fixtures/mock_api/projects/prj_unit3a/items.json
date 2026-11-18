@@ -1,0 +1,182 @@
+{
+  "project_id": "prj_unit3a",
+  "items": [
+    {
+      "id": "itm_3a_01",
+      "project_id": "prj_unit3a",
+      "number": 1,
+      "origin_walk_id": "wlk_3a_first",
+      "point_id": "pnt_3a1_01",
+      "turn_ids": [
+        "trn_3a1_03"
+      ],
+      "title": "Grout missing at tub corner",
+      "description": "Grout is missing in the right corner where the tub meets the tile.",
+      "action": "Regrout the tub corner",
+      "trade": "general",
+      "room": "Bathroom",
+      "location_detail": "Right corner of the tub",
+      "severity": "functional",
+      "status": "open",
+      "review_reason": null,
+      "quote": "Grout's missing at the tub corner, right side.",
+      "quote_start_s": 9.0,
+      "quote_end_s": 12.0,
+      "video_url": "/media/walks/wlk_3a_first/display.mp4",
+      "video_start_s": 7.0,
+      "video_end_s": 13.0,
+      "confidence": 0.82,
+      "evidence": {
+        "t": 10.85,
+        "image_url": "/media/items/itm_3a_01/evidence.jpg",
+        "raw_url": "/media/items/itm_3a_01/frame.jpg",
+        "crop_url": "/media/items/itm_3a_01/crop.jpg",
+        "width": 1920,
+        "height": 1080,
+        "defect_svg": "M1154 360 L1224 360 L1224 694 L1154 694 Z",
+        "defect_box": {
+          "x1": 1153.6,
+          "y1": 359.8,
+          "x2": 1223.6,
+          "y2": 693.8
+        },
+        "crop_box": {
+          "x1": 830.6,
+          "y1": 256.3,
+          "x2": 1658.7,
+          "y2": 877.4
+        },
+        "pointer": {
+          "x": 1265.7,
+          "y": 703.9
+        },
+        "pointing_frame": "/media/items/itm_3a_01/pointing.jpg",
+        "hand_box": {
+          "x1": 1253.3,
+          "y1": 716.4,
+          "x2": 1513.0,
+          "y2": 1080.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "tile grout line"
+      },
+      "verification": null,
+      "closure": null,
+      "history": [
+        {
+          "at": "2026-11-04T14:52:59Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        }
+      ],
+      "dispatch": null,
+      "created_at": "2026-11-04T14:52:59Z",
+      "updated_at": "2026-11-04T14:52:59Z"
+    },
+    {
+      "id": "itm_3a_02",
+      "project_id": "prj_unit3a",
+      "number": 2,
+      "origin_walk_id": "wlk_3a_first",
+      "point_id": "pnt_3a1_02",
+      "turn_ids": [
+        "trn_3a1_05"
+      ],
+      "title": "Gap under baseboard",
+      "description": "There's a gap between the baseboard and the floor by the bedroom closet.",
+      "action": "Close the gap at the baseboard",
+      "trade": "carpentry_millwork",
+      "room": "Bedroom",
+      "location_detail": "By the closet",
+      "severity": "cosmetic",
+      "status": "open",
+      "review_reason": null,
+      "quote": "Gap between the baseboard and the floor by the closet.",
+      "quote_start_s": 22.0,
+      "quote_end_s": 25.4,
+      "video_url": "/media/walks/wlk_3a_first/display.mp4",
+      "video_start_s": 20.0,
+      "video_end_s": 26.4,
+      "confidence": 0.85,
+      "evidence": {
+        "t": 24.05,
+        "image_url": "/media/items/itm_3a_02/evidence.jpg",
+        "raw_url": "/media/items/itm_3a_02/frame.jpg",
+        "crop_url": "/media/items/itm_3a_02/crop.jpg",
+        "width": 1920,
+        "height": 1080,
+        "defect_svg": "M688 931 L1328 931 L1328 976 L688 976 Z",
+        "defect_box": {
+          "x1": 688.0,
+          "y1": 931.0,
+          "x2": 1328.0,
+          "y2": 976.0
+        },
+        "crop_box": {
+          "x1": 528.0,
+          "y1": 360.0,
+          "x2": 1488.0,
+          "y2": 1080.0
+        },
+        "pointer": {
+          "x": 1188.0,
+          "y": 906.0
+        },
+        "pointing_frame": "/media/items/itm_3a_02/pointing.jpg",
+        "hand_box": {
+          "x1": 1169.7,
+          "y1": 892.3,
+          "x2": 1468.4,
+          "y2": 1080.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "baseboard"
+      },
+      "verification": null,
+      "closure": null,
+      "history": [
+        {
+          "at": "2026-11-04T14:53:02.400000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        }
+      ],
+      "dispatch": null,
+      "created_at": "2026-11-04T14:53:02.400000Z",
+      "updated_at": "2026-11-04T14:53:02.400000Z"
+    }
+  ],
+  "facets": {
+    "trade": {
+      "carpentry_millwork": 1,
+      "general": 1
+    },
+    "severity": {
+      "cosmetic": 1,
+      "functional": 1
+    },
+    "room": {
+      "Bathroom": 1,
+      "Bedroom": 1
+    },
+    "status": {
+      "open": 2
+    }
+  },
+  "counts": {
+    "todo": 2,
+    "open": 2,
+    "needs_review": 0,
+    "signed_off": 0,
+    "all": 2
+  },
+  "total": 2
+}

@@ -1,0 +1,58 @@
+{
+  "token": "shr_392a5bd026",
+  "project_name": "Unit 3A turnover",
+  "project_address": "418 Alder Street, Unit 3A",
+  "number": 3,
+  "title": "Paint drip on door casing",
+  "description": "A dried paint drip on the hallway door casing.",
+  "action": "Sand and touch up the casing",
+  "trade": "painting",
+  "company": "Brightline Painting",
+  "room": "Hallway",
+  "location_detail": "Door casing",
+  "severity": "cosmetic",
+  "status": "open",
+  "quote": "Paint drip on the door casing here.",
+  "quote_start_s": 37.0,
+  "quote_end_s": 40.2,
+  "video_url": "/media/walks/wlk_3a_first/display.mp4",
+  "video_start_s": 35.0,
+  "video_end_s": 41.2,
+  "evidence": {
+    "t": 38.75,
+    "image_url": "/media/items/itm_3a_03/evidence.jpg",
+    "raw_url": "/media/items/itm_3a_03/frame.jpg",
+    "crop_url": "/media/items/itm_3a_03/crop.jpg",
+    "width": 1920,
+    "height": 1080,
+    "defect_svg": "M898 551 L896 580 L890 605 L881 626 L869 639 L856 643 L843 639 L831 626 L822 605 L816 580 L814 551 L816 523 L822 497 L831 477 L843 464 L856 459 L869 464 L881 477 L890 497 L896 523 Z",
+    "defect_box": {
+      "x1": 814.0,
+      "y1": 459.3,
+      "x2": 898.0,
+      "y2": 643.3
+    },
+    "crop_box": {
+      "x1": 622.8,
+      "y1": 368.5,
+      "x2": 1182.8,
+      "y2": 788.5
+    },
+    "pointer": {
+      "x": 921.7,
+      "y": 627.8
+    },
+    "pointing_frame": "/media/items/itm_3a_03/pointing.jpg",
+    "hand_box": {
+      "x1": 936.3,
+      "y1": 614.2,
+      "x2": 1439.0,
+      "y2": 1080.0
+    },
+    "grounding": "sam_concept",
+    "sam_concept": "paint drip"
+  },
+  "closure": null,
+  "walked_at": "2026-11-04T14:40:00Z",
+  "after_at": null
+}

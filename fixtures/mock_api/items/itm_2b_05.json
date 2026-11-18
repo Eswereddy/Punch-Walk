@@ -1,0 +1,139 @@
+{
+  "id": "itm_2b_05",
+  "project_id": "prj_unit2b",
+  "number": 5,
+  "origin_walk_id": "wlk_2b_first",
+  "point_id": "pnt_2b1_05",
+  "turn_ids": [
+    "trn_2b1_09"
+  ],
+  "title": "Toothpaste splatter on mirror",
+  "description": "The bathroom mirror has toothpaste splatter across it.",
+  "action": "Clean the mirror",
+  "trade": "cleaning",
+  "room": "Bathroom",
+  "location_detail": "Vanity mirror",
+  "severity": "cosmetic",
+  "status": "closed",
+  "review_reason": null,
+  "quote": "Mirror's got toothpaste splatter all over it.",
+  "quote_start_s": 69.5,
+  "quote_end_s": 72.8,
+  "video_url": "/media/walks/wlk_2b_first/display.mp4",
+  "video_start_s": 67.5,
+  "video_end_s": 73.8,
+  "confidence": 0.92,
+  "evidence": {
+    "t": 71.45,
+    "image_url": "/media/items/itm_2b_05/evidence.jpg",
+    "raw_url": "/media/items/itm_2b_05/frame.jpg",
+    "crop_url": "/media/items/itm_2b_05/crop.jpg",
+    "width": 1080,
+    "height": 1920,
+    "defect_svg": "M742 708 L734 750 L711 788 L674 818 L628 837 L577 843 L526 837 L480 818 L444 788 L420 750 L412 708 L420 667 L444 629 L480 599 L526 580 L577 573 L628 580 L674 599 L711 629 L734 667 Z",
+    "defect_box": {
+      "x1": 412.4,
+      "y1": 573.3,
+      "x2": 742.4,
+      "y2": 843.3
+    },
+    "crop_box": {
+      "x1": 213.6,
+      "y1": 482.4,
+      "x2": 941.3,
+      "y2": 1028.1
+    },
+    "pointer": {
+      "x": 604.7,
+      "y": 867.2
+    },
+    "pointing_frame": "/media/items/itm_2b_05/pointing.jpg",
+    "hand_box": {
+      "x1": 550.8,
+      "y1": 854.5,
+      "x2": 898.2,
+      "y2": 1920.0
+    },
+    "grounding": "sam_concept",
+    "sam_concept": "toothpaste splatter"
+  },
+  "verification": {
+    "consistent": true,
+    "note": "Matches the photo and what was said.",
+    "issues": [],
+    "provider": "baseten",
+    "checked_at": "2026-11-03T15:41:47.150000Z"
+  },
+  "closure": {
+    "rewalk_id": "wlk_2b_rewalk",
+    "rewalk_turn_id": "trn_2b2_08",
+    "quote": "Mirror's clean, fixed.",
+    "after_t": 47.55,
+    "before_image_url": "/media/items/itm_2b_05/crop.jpg",
+    "after_image_url": "/media/items/itm_2b_05/after.jpg",
+    "after_frame_url": "/media/items/itm_2b_05/after_frame.jpg",
+    "before_after_url": "/media/items/itm_2b_05/before_after.jpg",
+    "voice_status": "fixed",
+    "vision_status": "fixed",
+    "decision": "signed_off",
+    "note": "The defect is gone where the inspector pointed.",
+    "decided_at": "2026-11-04T13:21:09Z"
+  },
+  "history": [
+    {
+      "at": "2026-11-03T15:41:22.100000Z",
+      "actor": "model",
+      "action": "created",
+      "field": "status",
+      "from": null,
+      "to": "open",
+      "note": "Written by Muse Spark Open on Baseten."
+    },
+    {
+      "at": "2026-11-03T15:41:47.150000Z",
+      "actor": "model",
+      "action": "verified",
+      "field": null,
+      "from": null,
+      "to": null,
+      "note": "Matches the photo and what was said."
+    },
+    {
+      "at": "2026-11-03T15:42:02Z",
+      "actor": "system",
+      "action": "dispatched",
+      "field": "status",
+      "from": "open",
+      "to": "dispatched",
+      "note": "Emailed 3 items to Spotless Final Clean automatically: checked against the photo and the quote."
+    },
+    {
+      "at": "2026-11-04T13:21:09Z",
+      "actor": "model",
+      "action": "rewalk_checked",
+      "field": null,
+      "from": null,
+      "to": null,
+      "note": "Marked fixed on the re-walk, and the defect is gone."
+    },
+    {
+      "at": "2026-11-04T13:21:09.200000Z",
+      "actor": "system",
+      "action": "status_changed",
+      "field": "status",
+      "from": "dispatched",
+      "to": "closed",
+      "note": "Signed off from the re-walk."
+    }
+  ],
+  "dispatch": {
+    "dispatch_id": "dsp_2b_02",
+    "trade": "cleaning",
+    "company": "Spotless Final Clean",
+    "channel": "email",
+    "sent_at": "2026-11-03T15:42:02Z",
+    "times_sent": 1
+  },
+  "created_at": "2026-11-03T15:41:22.100000Z",
+  "updated_at": "2026-11-04T13:21:09.200000Z"
+}

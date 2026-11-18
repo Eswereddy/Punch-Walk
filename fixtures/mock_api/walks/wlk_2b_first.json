@@ -1,0 +1,2366 @@
+{
+  "walk": {
+    "id": "wlk_2b_first",
+    "project_id": "prj_unit2b",
+    "project_name": "Unit 2B final punch",
+    "kind": "initial",
+    "status": "ready",
+    "rewalk_of": null,
+    "job_id": "job_2b_first",
+    "recorded_at": "2026-11-03T15:12:00Z",
+    "created_at": "2026-11-03T15:40:00Z",
+    "updated_at": "2026-11-03T15:41:56.600000Z",
+    "clips": [
+      {
+        "order": 0,
+        "filename": "walk1_a.mp4",
+        "duration_s": 82.4,
+        "offset_s": 0.0
+      },
+      {
+        "order": 1,
+        "filename": "walk1_b.mp4",
+        "duration_s": 71.1,
+        "offset_s": 82.4
+      }
+    ],
+    "stages": [
+      {
+        "stage": "ingest",
+        "label": "Preparing the video",
+        "status": "done",
+        "started_at": "2026-11-03T15:40:05Z",
+        "finished_at": "2026-11-03T15:40:14.200000Z",
+        "duration_ms": 9200,
+        "counts": {
+          "clips": 2
+        },
+        "progress": null,
+        "detail": "2 clips, 2 min 34 s",
+        "model_label": null,
+        "message": null
+      },
+      {
+        "stage": "transcribe",
+        "label": "Listening to the walk",
+        "status": "done",
+        "started_at": "2026-11-03T15:40:14.200000Z",
+        "finished_at": "2026-11-03T15:40:21.300000Z",
+        "duration_ms": 7100,
+        "counts": {
+          "lines": 21
+        },
+        "progress": null,
+        "detail": "Muse Voice Transcribe found 21 lines",
+        "model_label": "Muse Voice Transcribe",
+        "message": null
+      },
+      {
+        "stage": "classify_turns",
+        "label": "Sorting what was said",
+        "status": "done",
+        "started_at": "2026-11-03T15:40:21.300000Z",
+        "finished_at": "2026-11-03T15:40:26.100000Z",
+        "duration_ms": 4800,
+        "counts": {
+          "lines": 21
+        },
+        "progress": null,
+        "detail": "Muse Spark Open on Baseten sorted 21 lines",
+        "model_label": "Muse Spark Open on Baseten",
+        "message": null
+      },
+      {
+        "stage": "track_hands",
+        "label": "Following your hand (SAM 3.1)",
+        "status": "done",
+        "started_at": "2026-11-03T15:40:26.100000Z",
+        "finished_at": "2026-11-03T15:41:10.500000Z",
+        "duration_ms": 44400,
+        "counts": {
+          "frames": 1535,
+          "hands": 11
+        },
+        "progress": null,
+        "detail": "11 points found",
+        "model_label": "SAM 3.1",
+        "message": null
+      },
+      {
+        "stage": "find_points",
+        "label": "Finding where you pointed",
+        "status": "done",
+        "started_at": "2026-11-03T15:41:10.500000Z",
+        "finished_at": "2026-11-03T15:41:11.600000Z",
+        "duration_ms": 1100,
+        "counts": {
+          "points": 11,
+          "mentions": 12,
+          "voice_only": 1
+        },
+        "progress": null,
+        "detail": "11 places you pointed, 1 described without pointing",
+        "model_label": null,
+        "message": null
+      },
+      {
+        "stage": "fuse",
+        "label": "Matching what was said to each point",
+        "status": "done",
+        "started_at": "2026-11-03T15:41:11.600000Z",
+        "finished_at": "2026-11-03T15:41:11.700000Z",
+        "duration_ms": 100,
+        "counts": {
+          "items": 12,
+          "pointed": 11,
+          "voice_only": 1
+        },
+        "progress": null,
+        "detail": "11 matched to where you pointed, 1 described without pointing",
+        "model_label": null,
+        "message": null
+      },
+      {
+        "stage": "pick_evidence",
+        "label": "Picking the clearest photo",
+        "status": "done",
+        "started_at": "2026-11-03T15:41:11.700000Z",
+        "finished_at": "2026-11-03T15:41:15.600000Z",
+        "duration_ms": 3900,
+        "counts": {
+          "photos": 12
+        },
+        "progress": null,
+        "detail": "12 photos picked",
+        "model_label": null,
+        "message": null
+      },
+      {
+        "stage": "write_items",
+        "label": "Writing items",
+        "status": "done",
+        "started_at": "2026-11-03T15:41:15.600000Z",
+        "finished_at": "2026-11-03T15:41:31.800000Z",
+        "duration_ms": 16200,
+        "counts": {
+          "written": 12,
+          "total": 12
+        },
+        "progress": null,
+        "detail": "Muse Spark Open on Baseten wrote 12 items",
+        "model_label": "Muse Spark Open on Baseten",
+        "message": null
+      },
+      {
+        "stage": "ground_defects",
+        "label": "Outlining each defect",
+        "status": "done",
+        "started_at": "2026-11-03T15:41:31.800000Z",
+        "finished_at": "2026-11-03T15:41:41.400000Z",
+        "duration_ms": 9600,
+        "counts": {
+          "outlined": 9
+        },
+        "progress": null,
+        "detail": "SAM 3.1 outlined 9 defects",
+        "model_label": "SAM 3.1",
+        "message": null
+      },
+      {
+        "stage": "verify",
+        "label": "Checking each item against its photo",
+        "status": "done",
+        "started_at": "2026-11-03T15:41:41.400000Z",
+        "finished_at": "2026-11-03T15:41:56Z",
+        "duration_ms": 14600,
+        "counts": {
+          "checked": 12,
+          "matched": 11,
+          "total": 12
+        },
+        "progress": null,
+        "detail": "11 match the photo and what was said, 1 needs a look",
+        "model_label": "Muse Spark Open on Baseten",
+        "message": null
+      },
+      {
+        "stage": "persist",
+        "label": "Saving the punch list",
+        "status": "done",
+        "started_at": "2026-11-03T15:41:56Z",
+        "finished_at": "2026-11-03T15:41:56.600000Z",
+        "duration_ms": 600,
+        "counts": {},
+        "progress": null,
+        "detail": "Saved",
+        "model_label": null,
+        "message": null
+      }
+    ],
+    "media": {
+      "display_mp4": "/media/walks/wlk_2b_first/display.mp4",
+      "poster": "/media/walks/wlk_2b_first/poster.jpg"
+    },
+    "duration_s": 153.5,
+    "fps": 30.0,
+    "width": 1080,
+    "height": 1920,
+    "orientation": "portrait",
+    "device": "glasses",
+    "error": null,
+    "counts": {
+      "items": 12,
+      "points": 11,
+      "turns": 21,
+      "needs_review": 2,
+      "signed_off": 6,
+      "still_open": 4,
+      "not_checked": 0
+    }
+  },
+  "turns": [
+    {
+      "id": "trn_2b1_01",
+      "walk_id": "wlk_2b_first",
+      "idx": 0,
+      "start_ms": 1200,
+      "end_ms": 2600,
+      "text": "Okay, starting the final punch for unit 2B.",
+      "kind": "other",
+      "room": null,
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_02",
+      "walk_id": "wlk_2b_first",
+      "idx": 1,
+      "start_ms": 4000,
+      "end_ms": 4800,
+      "text": "Kitchen.",
+      "kind": "location",
+      "room": "Kitchen",
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_03",
+      "walk_id": "wlk_2b_first",
+      "idx": 2,
+      "start_ms": 14000,
+      "end_ms": 17200,
+      "text": "Upper cabinet left of the sink, uh, knob's missing.",
+      "kind": "defect",
+      "room": "Kitchen",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_01"
+      ]
+    },
+    {
+      "id": "trn_2b1_04",
+      "walk_id": "wlk_2b_first",
+      "idx": 3,
+      "start_ms": 20000,
+      "end_ms": 22000,
+      "text": "Moving down to the counter.",
+      "kind": "other",
+      "room": "Kitchen",
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_05",
+      "walk_id": "wlk_2b_first",
+      "idx": 4,
+      "start_ms": 27000,
+      "end_ms": 30400,
+      "text": "Coffee drips on the counter next to the stove, needs a wipe.",
+      "kind": "defect",
+      "room": "Kitchen",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_02"
+      ]
+    },
+    {
+      "id": "trn_2b1_06",
+      "walk_id": "wlk_2b_first",
+      "idx": 5,
+      "start_ms": 39500,
+      "end_ms": 42500,
+      "text": "Light over the sink is out, there's no bulb in it.",
+      "kind": "defect",
+      "room": "Kitchen",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_03"
+      ]
+    },
+    {
+      "id": "trn_2b1_07",
+      "walk_id": "wlk_2b_first",
+      "idx": 6,
+      "start_ms": 50000,
+      "end_ms": 50900,
+      "text": "Okay, bathroom.",
+      "kind": "location",
+      "room": "Bathroom",
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_08",
+      "walk_id": "wlk_2b_first",
+      "idx": 7,
+      "start_ms": 57000,
+      "end_ms": 60600,
+      "text": "Towel bar by the shower is loose, it wiggles.",
+      "kind": "defect",
+      "room": "Bathroom",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_04"
+      ]
+    },
+    {
+      "id": "trn_2b1_09",
+      "walk_id": "wlk_2b_first",
+      "idx": 8,
+      "start_ms": 69500,
+      "end_ms": 72800,
+      "text": "Mirror's got toothpaste splatter all over it.",
+      "kind": "defect",
+      "room": "Bathroom",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_05"
+      ]
+    },
+    {
+      "id": "trn_2b1_10",
+      "walk_id": "wlk_2b_first",
+      "idx": 9,
+      "start_ms": 78000,
+      "end_ms": 80000,
+      "text": "That's it for the bathroom.",
+      "kind": "other",
+      "room": "Bathroom",
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_11",
+      "walk_id": "wlk_2b_first",
+      "idx": 10,
+      "start_ms": 85000,
+      "end_ms": 85800,
+      "text": "Bedroom.",
+      "kind": "location",
+      "room": "Bedroom",
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_12",
+      "walk_id": "wlk_2b_first",
+      "idx": 11,
+      "start_ms": 92000,
+      "end_ms": 95400,
+      "text": "Bedroom door won't latch when you close it.",
+      "kind": "defect",
+      "room": "Bedroom",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_06"
+      ]
+    },
+    {
+      "id": "trn_2b1_13",
+      "walk_id": "wlk_2b_first",
+      "idx": 12,
+      "start_ms": 104000,
+      "end_ms": 107000,
+      "text": "Scuff marks on the wall left of the closet door.",
+      "kind": "defect",
+      "room": "Bedroom",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_07"
+      ]
+    },
+    {
+      "id": "trn_2b1_14",
+      "walk_id": "wlk_2b_first",
+      "idx": 13,
+      "start_ms": 112000,
+      "end_ms": 116000,
+      "text": "Outlet cover left of the bed is cracked, somebody could get a shock.",
+      "kind": "defect",
+      "room": "Bedroom",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_11"
+      ]
+    },
+    {
+      "id": "trn_2b1_15",
+      "walk_id": "wlk_2b_first",
+      "idx": 14,
+      "start_ms": 119000,
+      "end_ms": 122000,
+      "text": "Closet door's got a dent down at the bottom.",
+      "kind": "defect",
+      "room": "Bedroom",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_12"
+      ]
+    },
+    {
+      "id": "trn_2b1_16",
+      "walk_id": "wlk_2b_first",
+      "idx": 15,
+      "start_ms": 124000,
+      "end_ms": 124800,
+      "text": "Hallway.",
+      "kind": "location",
+      "room": "Hallway",
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_17",
+      "walk_id": "wlk_2b_first",
+      "idx": 16,
+      "start_ms": 127500,
+      "end_ms": 130500,
+      "text": "Switch plate by the hall closet is crooked.",
+      "kind": "defect",
+      "room": "Hallway",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_08"
+      ]
+    },
+    {
+      "id": "trn_2b1_18",
+      "walk_id": "wlk_2b_first",
+      "idx": 17,
+      "start_ms": 135000,
+      "end_ms": 136000,
+      "text": "Living room.",
+      "kind": "location",
+      "room": "Living room",
+      "claimed": null,
+      "item_ids": []
+    },
+    {
+      "id": "trn_2b1_19",
+      "walk_id": "wlk_2b_first",
+      "idx": 18,
+      "start_ms": 139000,
+      "end_ms": 142200,
+      "text": "Window screen's missing on the left window.",
+      "kind": "defect",
+      "room": "Living room",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_09"
+      ]
+    },
+    {
+      "id": "trn_2b1_20",
+      "walk_id": "wlk_2b_first",
+      "idx": 19,
+      "start_ms": 147500,
+      "end_ms": 151000,
+      "text": "And there's sawdust on the floor by the window, needs a sweep.",
+      "kind": "defect",
+      "room": "Living room",
+      "claimed": null,
+      "item_ids": [
+        "itm_2b_10"
+      ]
+    },
+    {
+      "id": "trn_2b1_21",
+      "walk_id": "wlk_2b_first",
+      "idx": 20,
+      "start_ms": 151600,
+      "end_ms": 153000,
+      "text": "That's the walk.",
+      "kind": "other",
+      "room": "Living room",
+      "claimed": null,
+      "item_ids": []
+    }
+  ],
+  "points": [
+    {
+      "id": "pnt_2b1_01",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_01",
+      "item_number": 1,
+      "number": 1,
+      "t": 14.5,
+      "frame": 145,
+      "fingertip_x": 619.8,
+      "fingertip_y": 1032.3,
+      "hand_box": {
+        "x1": 544.4,
+        "y1": 1031.8,
+        "x2": 885.9,
+        "y2": 1920.0
+      },
+      "hold_s": 1.8,
+      "sam_object_ids": [
+        "a:1"
+      ],
+      "mean_conf": 0.86,
+      "turn_id": "trn_2b1_03"
+    },
+    {
+      "id": "pnt_2b1_02",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_02",
+      "item_number": 2,
+      "number": 2,
+      "t": 27.4,
+      "frame": 274,
+      "fingertip_x": 594.8,
+      "fingertip_y": 1542.7,
+      "hand_box": {
+        "x1": 579.7,
+        "y1": 1540.8,
+        "x2": 847.4,
+        "y2": 1920.0
+      },
+      "hold_s": 1.6,
+      "sam_object_ids": [
+        "a:2"
+      ],
+      "mean_conf": 0.87,
+      "turn_id": "trn_2b1_05"
+    },
+    {
+      "id": "pnt_2b1_03",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_03",
+      "item_number": 3,
+      "number": 3,
+      "t": 40.1,
+      "frame": 401,
+      "fingertip_x": 578.2,
+      "fingertip_y": 745.3,
+      "hand_box": {
+        "x1": 500.4,
+        "y1": 744.9,
+        "x2": 895.6,
+        "y2": 1920.0
+      },
+      "hold_s": 2.0,
+      "sam_object_ids": [
+        "a:3"
+      ],
+      "mean_conf": 0.88,
+      "turn_id": "trn_2b1_06"
+    },
+    {
+      "id": "pnt_2b1_04",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_04",
+      "item_number": 4,
+      "number": 4,
+      "t": 57.5,
+      "frame": 575,
+      "fingertip_x": 592.8,
+      "fingertip_y": 1097.0,
+      "hand_box": {
+        "x1": 530.5,
+        "y1": 1096.3,
+        "x2": 887.5,
+        "y2": 1920.0
+      },
+      "hold_s": 1.7,
+      "sam_object_ids": [
+        "a:4"
+      ],
+      "mean_conf": 0.89,
+      "turn_id": "trn_2b1_08"
+    },
+    {
+      "id": "pnt_2b1_05",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_05",
+      "item_number": 5,
+      "number": 5,
+      "t": 70.0,
+      "frame": 700,
+      "fingertip_x": 636.6,
+      "fingertip_y": 854.7,
+      "hand_box": {
+        "x1": 550.8,
+        "y1": 854.5,
+        "x2": 898.2,
+        "y2": 1920.0
+      },
+      "hold_s": 1.9,
+      "sam_object_ids": [
+        "a:5"
+      ],
+      "mean_conf": 0.9,
+      "turn_id": "trn_2b1_09"
+    },
+    {
+      "id": "pnt_2b1_06",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_06",
+      "item_number": 6,
+      "number": 6,
+      "t": 92.6,
+      "frame": 926,
+      "fingertip_x": 877.3,
+      "fingertip_y": 1182.1,
+      "hand_box": {
+        "x1": 745.9,
+        "y1": 1182.1,
+        "x2": 983.9,
+        "y2": 1920.0
+      },
+      "hold_s": 2.0,
+      "sam_object_ids": [
+        "b:1"
+      ],
+      "mean_conf": 0.91,
+      "turn_id": "trn_2b1_12"
+    },
+    {
+      "id": "pnt_2b1_07",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_07",
+      "item_number": 7,
+      "number": 7,
+      "t": 104.5,
+      "frame": 1045,
+      "fingertip_x": 435.0,
+      "fingertip_y": 1111.2,
+      "hand_box": {
+        "x1": 409.1,
+        "y1": 1109.7,
+        "x2": 847.4,
+        "y2": 1920.0
+      },
+      "hold_s": 1.8,
+      "sam_object_ids": [
+        "b:2"
+      ],
+      "mean_conf": 0.92,
+      "turn_id": "trn_2b1_13"
+    },
+    {
+      "id": "pnt_2b1_08",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_12",
+      "item_number": 12,
+      "number": 8,
+      "t": 119.4,
+      "frame": 1194,
+      "fingertip_x": 546.2,
+      "fingertip_y": 1439.4,
+      "hand_box": {
+        "x1": 525.1,
+        "y1": 1437.7,
+        "x2": 833.1,
+        "y2": 1920.0
+      },
+      "hold_s": 1.7,
+      "sam_object_ids": [
+        "b:3"
+      ],
+      "mean_conf": 0.93,
+      "turn_id": "trn_2b1_15"
+    },
+    {
+      "id": "pnt_2b1_09",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_08",
+      "item_number": 8,
+      "number": 9,
+      "t": 128.1,
+      "frame": 1281,
+      "fingertip_x": 590.3,
+      "fingertip_y": 1108.3,
+      "hand_box": {
+        "x1": 527.8,
+        "y1": 1107.6,
+        "x2": 881.1,
+        "y2": 1920.0
+      },
+      "hold_s": 2.0,
+      "sam_object_ids": [
+        "b:4"
+      ],
+      "mean_conf": 0.94,
+      "turn_id": "trn_2b1_17"
+    },
+    {
+      "id": "pnt_2b1_10",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_09",
+      "item_number": 9,
+      "number": 10,
+      "t": 139.4,
+      "frame": 1394,
+      "fingertip_x": 686.8,
+      "fingertip_y": 1345.7,
+      "hand_box": {
+        "x1": 618.2,
+        "y1": 1345.0,
+        "x2": 900.6,
+        "y2": 1920.0
+      },
+      "hold_s": 1.6,
+      "sam_object_ids": [
+        "b:5"
+      ],
+      "mean_conf": 0.86,
+      "turn_id": "trn_2b1_19"
+    },
+    {
+      "id": "pnt_2b1_11",
+      "walk_id": "wlk_2b_first",
+      "item_id": "itm_2b_10",
+      "item_number": 10,
+      "number": 11,
+      "t": 148.0,
+      "frame": 1480,
+      "fingertip_x": 572.3,
+      "fingertip_y": 1499.7,
+      "hand_box": {
+        "x1": 551.7,
+        "y1": 1498.0,
+        "x2": 833.9,
+        "y2": 1920.0
+      },
+      "hold_s": 1.9,
+      "sam_object_ids": [
+        "b:6"
+      ],
+      "mean_conf": 0.87,
+      "turn_id": "trn_2b1_20"
+    }
+  ],
+  "items": [
+    {
+      "id": "itm_2b_01",
+      "project_id": "prj_unit2b",
+      "number": 1,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_01",
+      "turn_ids": [
+        "trn_2b1_03"
+      ],
+      "title": "Missing cabinet knob",
+      "description": "The upper cabinet left of the sink is missing its knob, leaving the mounting hole exposed.",
+      "action": "Install a matching knob",
+      "trade": "carpentry_millwork",
+      "room": "Kitchen",
+      "location_detail": "Upper cabinet left of the sink",
+      "severity": "cosmetic",
+      "status": "closed",
+      "review_reason": null,
+      "quote": "Upper cabinet left of the sink, uh, knob's missing.",
+      "quote_start_s": 14.0,
+      "quote_end_s": 17.2,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 12.0,
+      "video_end_s": 18.2,
+      "confidence": 0.93,
+      "evidence": {
+        "t": 15.85,
+        "image_url": "/media/items/itm_2b_01/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_01/frame.jpg",
+        "crop_url": "/media/items/itm_2b_01/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M622 973 L620 988 L613 1000 L603 1011 L590 1017 L576 1019 L562 1017 L549 1011 L539 1000 L532 988 L530 973 L532 959 L539 946 L549 936 L562 930 L576 927 L590 930 L603 936 L613 946 L620 959 Z",
+        "defect_box": {
+          "x1": 530.0,
+          "y1": 927.4,
+          "x2": 622.0,
+          "y2": 1019.4
+        },
+        "crop_box": {
+          "x1": 310.9,
+          "y1": 810.4,
+          "x2": 870.9,
+          "y2": 1230.4
+        },
+        "pointer": {
+          "x": 590.9,
+          "y": 1043.5
+        },
+        "pointing_frame": "/media/items/itm_2b_01/pointing.jpg",
+        "hand_box": {
+          "x1": 544.4,
+          "y1": 1031.8,
+          "x2": 885.9,
+          "y2": 1920.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "cabinet knob hole"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:42.550000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_03",
+        "quote": "Cabinet knob, fixed.",
+        "after_t": 10.65,
+        "before_image_url": "/media/items/itm_2b_01/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_01/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_01/after_frame.jpg",
+        "before_after_url": "/media/items/itm_2b_01/before_after.jpg",
+        "voice_status": "fixed",
+        "vision_status": "fixed",
+        "decision": "signed_off",
+        "note": "The defect is gone where the inspector pointed.",
+        "decided_at": "2026-11-04T13:21:02.200000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:16.900000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:42.550000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:01Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 2 items to Oakline Millwork automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:02.200000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Marked fixed on the re-walk, and the defect is gone."
+        },
+        {
+          "at": "2026-11-04T13:21:02.400000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "closed",
+          "note": "Signed off from the re-walk."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_01",
+        "trade": "carpentry_millwork",
+        "company": "Oakline Millwork",
+        "channel": "email",
+        "sent_at": "2026-11-03T15:42:01Z",
+        "times_sent": 1
+      },
+      "created_at": "2026-11-03T15:41:16.900000Z",
+      "updated_at": "2026-11-04T13:21:02.400000Z"
+    },
+    {
+      "id": "itm_2b_02",
+      "project_id": "prj_unit2b",
+      "number": 2,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_02",
+      "turn_ids": [
+        "trn_2b1_05"
+      ],
+      "title": "Coffee drips on counter",
+      "description": "Dried coffee drips on the counter next to the stove.",
+      "action": "Clean the counter",
+      "trade": "cleaning",
+      "room": "Kitchen",
+      "location_detail": "Counter next to the stove",
+      "severity": "cosmetic",
+      "status": "needs_review",
+      "review_reason": "Marked fixed on the re-walk, but the defect is still visible.",
+      "quote": "Coffee drips on the counter next to the stove, needs a wipe.",
+      "quote_start_s": 27.0,
+      "quote_end_s": 30.4,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 25.0,
+      "video_end_s": 31.4,
+      "confidence": 0.91,
+      "evidence": {
+        "t": 28.65,
+        "image_url": "/media/items/itm_2b_02/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_02/frame.jpg",
+        "crop_url": "/media/items/itm_2b_02/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M660 1426 L655 1456 L639 1482 L615 1503 L584 1517 L550 1521 L516 1517 L486 1503 L461 1482 L446 1456 L440 1426 L446 1397 L461 1371 L486 1350 L516 1336 L550 1331 L584 1336 L615 1350 L639 1371 L655 1397 Z",
+        "defect_box": {
+          "x1": 440.3,
+          "y1": 1331.4,
+          "x2": 660.3,
+          "y2": 1521.4
+        },
+        "crop_box": {
+          "x1": 275.7,
+          "y1": 1259.7,
+          "x2": 835.7,
+          "y2": 1679.7
+        },
+        "pointer": {
+          "x": 601.0,
+          "y": 1538.1
+        },
+        "pointing_frame": "/media/items/itm_2b_02/pointing.jpg",
+        "hand_box": {
+          "x1": 579.7,
+          "y1": 1540.8,
+          "x2": 847.4,
+          "y2": 1920.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "coffee stain"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:43.700000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_04",
+        "quote": "Coffee drips on the counter, fixed.",
+        "after_t": 19.75,
+        "before_image_url": "/media/items/itm_2b_02/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_02/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_02/after_frame.jpg",
+        "before_after_url": "/media/items/itm_2b_02/before_after.jpg",
+        "voice_status": "fixed",
+        "vision_status": "still_visible",
+        "decision": "needs_review",
+        "note": "Coffee drips are still visible where the inspector pointed.",
+        "decided_at": "2026-11-04T13:21:03.900000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:18.200000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:43.700000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:02Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 3 items to Spotless Final Clean automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:03.900000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Marked fixed on the re-walk, but the coffee drips are still visible."
+        },
+        {
+          "at": "2026-11-04T13:21:04.100000Z",
+          "actor": "system",
+          "action": "flagged",
+          "field": "status",
+          "from": "dispatched",
+          "to": "needs_review",
+          "note": "Marked fixed on the re-walk, but the defect is still visible."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_02",
+        "trade": "cleaning",
+        "company": "Spotless Final Clean",
+        "channel": "email",
+        "sent_at": "2026-11-03T15:42:02Z",
+        "times_sent": 1
+      },
+      "created_at": "2026-11-03T15:41:18.200000Z",
+      "updated_at": "2026-11-04T13:21:04.100000Z"
+    },
+    {
+      "id": "itm_2b_03",
+      "project_id": "prj_unit2b",
+      "number": 3,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_03",
+      "turn_ids": [
+        "trn_2b1_06"
+      ],
+      "title": "Bulb out above the sink",
+      "description": "The light fixture over the kitchen sink has no bulb, so it doesn't light.",
+      "action": "Replace the bulb and test the fixture",
+      "trade": "electrical",
+      "room": "Kitchen",
+      "location_detail": "Fixture over the sink",
+      "severity": "functional",
+      "status": "closed",
+      "review_reason": null,
+      "quote": "Light over the sink is out, there's no bulb in it.",
+      "quote_start_s": 39.5,
+      "quote_end_s": 42.5,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 37.5,
+      "video_end_s": 43.5,
+      "confidence": 0.88,
+      "evidence": {
+        "t": 41.55,
+        "image_url": "/media/items/itm_2b_03/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_03/frame.jpg",
+        "crop_url": "/media/items/itm_2b_03/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M684 547 L678 591 L661 633 L633 668 L598 696 L556 713 L512 719 L467 713 L426 696 L390 668 L363 633 L345 591 L340 547 L345 502 L363 461 L390 425 L426 398 L467 380 L512 375 L556 380 L598 398 L633 425 L661 461 L678 502 Z",
+        "defect_box": {
+          "x1": 339.6,
+          "y1": 374.5,
+          "x2": 683.6,
+          "y2": 718.5
+        },
+        "crop_box": {
+          "x1": 75.8,
+          "y1": 265.6,
+          "x2": 947.3,
+          "y2": 919.2
+        },
+        "pointer": {
+          "x": 550.8,
+          "y": 740.3
+        },
+        "pointing_frame": "/media/items/itm_2b_03/pointing.jpg",
+        "hand_box": {
+          "x1": 500.4,
+          "y1": 744.9,
+          "x2": 895.6,
+          "y2": 1920.0
+        },
+        "grounding": "sam_box",
+        "sam_concept": "ceiling light fixture"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:44.850000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_05",
+        "quote": "Light over the sink, fixed.",
+        "after_t": 27.85,
+        "before_image_url": "/media/items/itm_2b_03/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_03/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_03/after_frame.jpg",
+        "before_after_url": "/media/items/itm_2b_03/before_after.jpg",
+        "voice_status": "fixed",
+        "vision_status": "fixed",
+        "decision": "signed_off",
+        "note": "The defect is gone where the inspector pointed.",
+        "decided_at": "2026-11-04T13:21:05.600000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:19.500000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:44.850000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:03Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Posted 3 items to #punch-electrical automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:05.600000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Marked fixed on the re-walk, and the defect is gone."
+        },
+        {
+          "at": "2026-11-04T13:21:05.800000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "closed",
+          "note": "Signed off from the re-walk."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_03",
+        "trade": "electrical",
+        "company": "Ace Electric",
+        "channel": "slack",
+        "sent_at": "2026-11-03T15:42:03Z",
+        "times_sent": 1
+      },
+      "created_at": "2026-11-03T15:41:19.500000Z",
+      "updated_at": "2026-11-04T13:21:05.800000Z"
+    },
+    {
+      "id": "itm_2b_04",
+      "project_id": "prj_unit2b",
+      "number": 4,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_04",
+      "turn_ids": [
+        "trn_2b1_08"
+      ],
+      "title": "Loose towel bar",
+      "description": "The towel bar by the shower is loose and moves when touched.",
+      "action": "Tighten the towel bar mounts",
+      "trade": "general",
+      "room": "Bathroom",
+      "location_detail": "Towel bar by the shower",
+      "severity": "functional",
+      "status": "closed",
+      "review_reason": null,
+      "quote": "Towel bar by the shower is loose, it wiggles.",
+      "quote_start_s": 57.0,
+      "quote_end_s": 60.6,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 55.0,
+      "video_end_s": 61.6,
+      "confidence": 0.86,
+      "evidence": {
+        "t": 58.75,
+        "image_url": "/media/items/itm_2b_04/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_04/frame.jpg",
+        "crop_url": "/media/items/itm_2b_04/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M233 963 L857 1015 L866 915 L242 863 Z",
+        "defect_box": {
+          "x1": 233.4,
+          "y1": 863.4,
+          "x2": 865.7,
+          "y2": 1015.1
+        },
+        "crop_box": {
+          "x1": 75.4,
+          "y1": 666.5,
+          "x2": 1023.8,
+          "y2": 1377.8
+        },
+        "pointer": {
+          "x": 594.6,
+          "y": 1110.9
+        },
+        "pointing_frame": "/media/items/itm_2b_04/pointing.jpg",
+        "hand_box": {
+          "x1": 530.5,
+          "y1": 1096.3,
+          "x2": 887.5,
+          "y2": 1920.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "towel bar"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:46Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_07",
+        "quote": "Towel bar, fixed.",
+        "after_t": 39.95,
+        "before_image_url": "/media/items/itm_2b_04/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_04/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_04/after_frame.jpg",
+        "before_after_url": "/media/items/itm_2b_04/before_after.jpg",
+        "voice_status": "fixed",
+        "vision_status": "fixed",
+        "decision": "signed_off",
+        "note": "The defect is gone where the inspector pointed.",
+        "decided_at": "2026-11-04T13:21:07.300000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:20.800000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:46Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:01Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 2 items to Oakline Millwork automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-03T16:05:00Z",
+          "actor": "human",
+          "action": "edited",
+          "field": "trade",
+          "from": "carpentry_millwork",
+          "to": "general",
+          "note": "Changed by the project manager."
+        },
+        {
+          "at": "2026-11-03T16:06:00Z",
+          "actor": "human",
+          "action": "dispatched",
+          "field": "status",
+          "from": "dispatched",
+          "to": "dispatched",
+          "note": "Copied a link for 1 item"
+        },
+        {
+          "at": "2026-11-04T13:21:07.300000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Marked fixed on the re-walk, and the defect is gone."
+        },
+        {
+          "at": "2026-11-04T13:21:07.500000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "closed",
+          "note": "Signed off from the re-walk."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_06",
+        "trade": "general",
+        "company": "Northfield Builders",
+        "channel": "outbox",
+        "sent_at": "2026-11-03T16:06:00Z",
+        "times_sent": 2
+      },
+      "created_at": "2026-11-03T15:41:20.800000Z",
+      "updated_at": "2026-11-04T13:21:07.500000Z"
+    },
+    {
+      "id": "itm_2b_05",
+      "project_id": "prj_unit2b",
+      "number": 5,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_05",
+      "turn_ids": [
+        "trn_2b1_09"
+      ],
+      "title": "Toothpaste splatter on mirror",
+      "description": "The bathroom mirror has toothpaste splatter across it.",
+      "action": "Clean the mirror",
+      "trade": "cleaning",
+      "room": "Bathroom",
+      "location_detail": "Vanity mirror",
+      "severity": "cosmetic",
+      "status": "closed",
+      "review_reason": null,
+      "quote": "Mirror's got toothpaste splatter all over it.",
+      "quote_start_s": 69.5,
+      "quote_end_s": 72.8,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 67.5,
+      "video_end_s": 73.8,
+      "confidence": 0.92,
+      "evidence": {
+        "t": 71.45,
+        "image_url": "/media/items/itm_2b_05/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_05/frame.jpg",
+        "crop_url": "/media/items/itm_2b_05/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M742 708 L734 750 L711 788 L674 818 L628 837 L577 843 L526 837 L480 818 L444 788 L420 750 L412 708 L420 667 L444 629 L480 599 L526 580 L577 573 L628 580 L674 599 L711 629 L734 667 Z",
+        "defect_box": {
+          "x1": 412.4,
+          "y1": 573.3,
+          "x2": 742.4,
+          "y2": 843.3
+        },
+        "crop_box": {
+          "x1": 213.6,
+          "y1": 482.4,
+          "x2": 941.3,
+          "y2": 1028.1
+        },
+        "pointer": {
+          "x": 604.7,
+          "y": 867.2
+        },
+        "pointing_frame": "/media/items/itm_2b_05/pointing.jpg",
+        "hand_box": {
+          "x1": 550.8,
+          "y1": 854.5,
+          "x2": 898.2,
+          "y2": 1920.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "toothpaste splatter"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:47.150000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_08",
+        "quote": "Mirror's clean, fixed.",
+        "after_t": 47.55,
+        "before_image_url": "/media/items/itm_2b_05/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_05/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_05/after_frame.jpg",
+        "before_after_url": "/media/items/itm_2b_05/before_after.jpg",
+        "voice_status": "fixed",
+        "vision_status": "fixed",
+        "decision": "signed_off",
+        "note": "The defect is gone where the inspector pointed.",
+        "decided_at": "2026-11-04T13:21:09Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:22.100000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:47.150000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:02Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 3 items to Spotless Final Clean automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:09Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Marked fixed on the re-walk, and the defect is gone."
+        },
+        {
+          "at": "2026-11-04T13:21:09.200000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "closed",
+          "note": "Signed off from the re-walk."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_02",
+        "trade": "cleaning",
+        "company": "Spotless Final Clean",
+        "channel": "email",
+        "sent_at": "2026-11-03T15:42:02Z",
+        "times_sent": 1
+      },
+      "created_at": "2026-11-03T15:41:22.100000Z",
+      "updated_at": "2026-11-04T13:21:09.200000Z"
+    },
+    {
+      "id": "itm_2b_06",
+      "project_id": "prj_unit2b",
+      "number": 6,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_06",
+      "turn_ids": [
+        "trn_2b1_12"
+      ],
+      "title": "Door doesn't latch",
+      "description": "The bedroom door doesn't latch when it's closed.",
+      "action": "Adjust the strike plate so the door latches",
+      "trade": "doors_hardware",
+      "room": "Bedroom",
+      "location_detail": "Bedroom door",
+      "severity": "functional",
+      "status": "closed",
+      "review_reason": null,
+      "quote": "Bedroom door won't latch when you close it.",
+      "quote_start_s": 92.0,
+      "quote_end_s": 95.4,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 90.0,
+      "video_end_s": 96.4,
+      "confidence": 0.9,
+      "evidence": {
+        "t": 94.05,
+        "image_url": "/media/items/itm_2b_06/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_06/frame.jpg",
+        "crop_url": "/media/items/itm_2b_06/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M852 1008 L912 1008 L912 1154 L852 1154 Z",
+        "defect_box": {
+          "x1": 851.8,
+          "y1": 1008.1,
+          "x2": 911.8,
+          "y2": 1154.1
+        },
+        "crop_box": {
+          "x1": 520.0,
+          "y1": 919.2,
+          "x2": 1080.0,
+          "y2": 1339.2
+        },
+        "pointer": {
+          "x": 882.0,
+          "y": 1180.2
+        },
+        "pointing_frame": "/media/items/itm_2b_06/pointing.jpg",
+        "hand_box": {
+          "x1": 745.9,
+          "y1": 1182.1,
+          "x2": 983.9,
+          "y2": 1920.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "door strike plate"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:48.300000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_10",
+        "quote": "Bedroom door latches now, fixed.",
+        "after_t": 58.65,
+        "before_image_url": "/media/items/itm_2b_06/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_06/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_06/after_frame.jpg",
+        "before_after_url": "/media/items/itm_2b_06/before_after.jpg",
+        "voice_status": "fixed",
+        "vision_status": "fixed",
+        "decision": "signed_off",
+        "note": "The defect is gone where the inspector pointed.",
+        "decided_at": "2026-11-04T13:21:10.700000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:23.400000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:48.300000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:04Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 1 item to Keystone Door & Hardware automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:10.700000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Marked fixed on the re-walk, and the defect is gone."
+        },
+        {
+          "at": "2026-11-04T13:21:10.900000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "closed",
+          "note": "Signed off from the re-walk."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_04",
+        "trade": "doors_hardware",
+        "company": "Keystone Door & Hardware",
+        "channel": "email",
+        "sent_at": "2026-11-03T15:42:04Z",
+        "times_sent": 1
+      },
+      "created_at": "2026-11-03T15:41:23.400000Z",
+      "updated_at": "2026-11-04T13:21:10.900000Z"
+    },
+    {
+      "id": "itm_2b_07",
+      "project_id": "prj_unit2b",
+      "number": 7,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_07",
+      "turn_ids": [
+        "trn_2b1_13"
+      ],
+      "title": "Scuff marks on wall",
+      "description": "Scuff marks on the bedroom wall to the left of the closet door.",
+      "action": "Touch up the paint",
+      "trade": "painting",
+      "room": "Bedroom",
+      "location_detail": "Left of the closet door",
+      "severity": "cosmetic",
+      "status": "dispatched",
+      "review_reason": null,
+      "quote": "Scuff marks on the wall left of the closet door.",
+      "quote_start_s": 104.0,
+      "quote_end_s": 107.0,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 102.0,
+      "video_end_s": 108.0,
+      "confidence": 0.94,
+      "evidence": {
+        "t": 105.85,
+        "image_url": "/media/items/itm_2b_07/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_07/frame.jpg",
+        "crop_url": "/media/items/itm_2b_07/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M517 996 L510 1020 L488 1042 L455 1059 L413 1070 L367 1074 L321 1070 L279 1059 L246 1042 L224 1020 L217 996 L224 972 L246 950 L279 933 L321 922 L367 918 L413 922 L455 933 L488 950 L510 972 Z",
+        "defect_box": {
+          "x1": 217.0,
+          "y1": 918.0,
+          "x2": 517.0,
+          "y2": 1074.0
+        },
+        "crop_box": {
+          "x1": 87.0,
+          "y1": 836.5,
+          "x2": 647.0,
+          "y2": 1256.5
+        },
+        "pointer": {
+          "x": 411.5,
+          "y": 1105.0
+        },
+        "pointing_frame": "/media/items/itm_2b_07/pointing.jpg",
+        "hand_box": {
+          "x1": 409.1,
+          "y1": 1109.7,
+          "x2": 847.4,
+          "y2": 1920.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "wall scuff mark"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:49.450000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_11",
+        "quote": "Bedroom scuffs, still there.",
+        "after_t": 66.75,
+        "before_image_url": "/media/items/itm_2b_07/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_07/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_07/after_frame.jpg",
+        "before_after_url": null,
+        "voice_status": "not_fixed",
+        "vision_status": "still_visible",
+        "decision": "still_open",
+        "note": "Said not fixed, and the defect is still visible.",
+        "decided_at": "2026-11-04T13:21:12.400000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:24.700000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:49.450000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:05Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 1 item to Brightline Painting automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:12.400000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Said not fixed on the re-walk. Still open."
+        },
+        {
+          "at": "2026-11-04T13:21:12.600000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "open",
+          "note": "Still open after the re-walk."
+        },
+        {
+          "at": "2026-11-04T13:25:30Z",
+          "actor": "human",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 1 item to Brightline Painting"
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_08",
+        "trade": "painting",
+        "company": "Brightline Painting",
+        "channel": "email",
+        "sent_at": "2026-11-04T13:25:30Z",
+        "times_sent": 2
+      },
+      "created_at": "2026-11-03T15:41:24.700000Z",
+      "updated_at": "2026-11-04T13:25:30Z"
+    },
+    {
+      "id": "itm_2b_11",
+      "project_id": "prj_unit2b",
+      "number": 11,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": null,
+      "turn_ids": [
+        "trn_2b1_14"
+      ],
+      "title": "Outlet cover cracked",
+      "description": "The outlet cover left of the bed is cracked, exposing the outlet.",
+      "action": "Replace the cover",
+      "trade": "electrical",
+      "room": "Bedroom",
+      "location_detail": "Left of the bed",
+      "severity": "safety",
+      "status": "dispatched",
+      "review_reason": null,
+      "quote": "Outlet cover left of the bed is cracked, somebody could get a shock.",
+      "quote_start_s": 112.0,
+      "quote_end_s": 116.0,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 110.0,
+      "video_end_s": 117.0,
+      "confidence": 0.84,
+      "evidence": {
+        "t": 113.8,
+        "image_url": "/media/items/itm_2b_11/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_11/frame.jpg",
+        "crop_url": "/media/items/itm_2b_11/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": null,
+        "defect_box": null,
+        "crop_box": {
+          "x1": 94.6,
+          "y1": 661.2,
+          "x2": 974.6,
+          "y2": 1321.2
+        },
+        "pointer": null,
+        "pointing_frame": null,
+        "hand_box": null,
+        "grounding": "none",
+        "sam_concept": "outlet cover plate"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:54.050000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": null,
+        "quote": null,
+        "after_t": null,
+        "before_image_url": "/media/items/itm_2b_11/crop.jpg",
+        "after_image_url": null,
+        "after_frame_url": null,
+        "before_after_url": null,
+        "voice_status": "not_mentioned",
+        "vision_status": "not_checked",
+        "decision": "not_checked",
+        "note": "Not checked on re-walk",
+        "decided_at": "2026-11-04T13:21:15.300000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:29.900000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:54.050000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:03Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Posted 3 items to #punch-electrical automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:15.300000Z",
+          "actor": "system",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Not checked on re-walk. The bedroom was visited, but nobody mentioned this item."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_03",
+        "trade": "electrical",
+        "company": "Ace Electric",
+        "channel": "slack",
+        "sent_at": "2026-11-03T15:42:03Z",
+        "times_sent": 1
+      },
+      "created_at": "2026-11-03T15:41:29.900000Z",
+      "updated_at": "2026-11-04T13:21:15.300000Z"
+    },
+    {
+      "id": "itm_2b_12",
+      "project_id": "prj_unit2b",
+      "number": 12,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_08",
+      "turn_ids": [
+        "trn_2b1_15"
+      ],
+      "title": "Dent in closet door",
+      "description": "The bedroom closet door has a dent near the bottom.",
+      "action": "Repair the dent and touch up the door",
+      "trade": "general",
+      "room": "Bedroom",
+      "location_detail": "Bottom of the closet door",
+      "severity": "cosmetic",
+      "status": "needs_review",
+      "review_reason": "The frame doesn't show the defect described.",
+      "quote": "Closet door's got a dent down at the bottom.",
+      "quote_start_s": 119.0,
+      "quote_end_s": 122.0,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 117.0,
+      "video_end_s": 123.0,
+      "confidence": 0.41,
+      "evidence": {
+        "t": 120.75,
+        "image_url": "/media/items/itm_2b_12/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_12/frame.jpg",
+        "crop_url": "/media/items/itm_2b_12/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": null,
+        "defect_box": null,
+        "crop_box": {
+          "x1": 128.2,
+          "y1": 1075.6,
+          "x2": 968.2,
+          "y2": 1705.6
+        },
+        "pointer": {
+          "x": 568.2,
+          "y": 1450.6
+        },
+        "pointing_frame": "/media/items/itm_2b_12/pointing.jpg",
+        "hand_box": {
+          "x1": 525.1,
+          "y1": 1437.7,
+          "x2": 833.1,
+          "y2": 1920.0
+        },
+        "grounding": "pointed_only",
+        "sam_concept": "door dent"
+      },
+      "verification": {
+        "consistent": false,
+        "note": "The frame doesn't show the defect described.",
+        "issues": [
+          "No dent is visible on the closet door where the inspector pointed."
+        ],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:55.200000Z"
+      },
+      "closure": null,
+      "history": [
+        {
+          "at": "2026-11-03T15:41:31.200000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:55.200000Z",
+          "actor": "model",
+          "action": "flagged",
+          "field": "status",
+          "from": "open",
+          "to": "needs_review",
+          "note": "The frame doesn't show the defect described. No dent is visible on the closet door where the inspector pointed."
+        }
+      ],
+      "dispatch": null,
+      "created_at": "2026-11-03T15:41:31.200000Z",
+      "updated_at": "2026-11-03T15:41:55.200000Z"
+    },
+    {
+      "id": "itm_2b_08",
+      "project_id": "prj_unit2b",
+      "number": 8,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_09",
+      "turn_ids": [
+        "trn_2b1_17"
+      ],
+      "title": "Switch plate crooked",
+      "description": "The switch plate by the hall closet is crooked.",
+      "action": "Straighten and tighten the plate",
+      "trade": "electrical",
+      "room": "Hallway",
+      "location_detail": "By the hall closet",
+      "severity": "cosmetic",
+      "status": "dispatched",
+      "review_reason": null,
+      "quote": "Switch plate by the hall closet is crooked.",
+      "quote_start_s": 127.5,
+      "quote_end_s": 130.5,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 125.5,
+      "video_end_s": 131.5,
+      "confidence": 0.95,
+      "evidence": {
+        "t": 129.55,
+        "image_url": "/media/items/itm_2b_08/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_08/frame.jpg",
+        "crop_url": "/media/items/itm_2b_08/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M673 813 L614 1087 L428 1048 L487 774 Z",
+        "defect_box": {
+          "x1": 428.5,
+          "y1": 773.7,
+          "x2": 672.5,
+          "y2": 1087.1
+        },
+        "crop_box": {
+          "x1": 136.4,
+          "y1": 670.2,
+          "x2": 964.6,
+          "y2": 1291.4
+        },
+        "pointer": {
+          "x": 599.5,
+          "y": 1117.8
+        },
+        "pointing_frame": "/media/items/itm_2b_08/pointing.jpg",
+        "hand_box": {
+          "x1": 527.8,
+          "y1": 1107.6,
+          "x2": 881.1,
+          "y2": 1920.0
+        },
+        "grounding": "sam_concept",
+        "sam_concept": "light switch plate"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:50.600000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_13",
+        "quote": "Switch plate, still crooked.",
+        "after_t": 77.85,
+        "before_image_url": "/media/items/itm_2b_08/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_08/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_08/after_frame.jpg",
+        "before_after_url": null,
+        "voice_status": "not_fixed",
+        "vision_status": "still_visible",
+        "decision": "still_open",
+        "note": "Said not fixed, and the defect is still visible.",
+        "decided_at": "2026-11-04T13:21:14.100000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:26Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:50.600000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:03Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Posted 3 items to #punch-electrical automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:14.100000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Said not fixed on the re-walk. Still open."
+        },
+        {
+          "at": "2026-11-04T13:21:14.300000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "open",
+          "note": "Still open after the re-walk."
+        },
+        {
+          "at": "2026-11-04T13:25:00Z",
+          "actor": "human",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Posted 1 item to #punch-electrical"
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_07",
+        "trade": "electrical",
+        "company": "Ace Electric",
+        "channel": "slack",
+        "sent_at": "2026-11-04T13:25:00Z",
+        "times_sent": 2
+      },
+      "created_at": "2026-11-03T15:41:26Z",
+      "updated_at": "2026-11-04T13:25:00Z"
+    },
+    {
+      "id": "itm_2b_09",
+      "project_id": "prj_unit2b",
+      "number": 9,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_10",
+      "turn_ids": [
+        "trn_2b1_19"
+      ],
+      "title": "Window screen missing",
+      "description": "The left living room window has no screen.",
+      "action": "Install the window screen",
+      "trade": "windows_glazing",
+      "room": "Living room",
+      "location_detail": "Left window",
+      "severity": "functional",
+      "status": "open",
+      "review_reason": null,
+      "quote": "Window screen's missing on the left window.",
+      "quote_start_s": 139.0,
+      "quote_end_s": 142.2,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 137.0,
+      "video_end_s": 143.2,
+      "confidence": 0.87,
+      "evidence": {
+        "t": 140.65,
+        "image_url": "/media/items/itm_2b_09/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_09/frame.jpg",
+        "crop_url": "/media/items/itm_2b_09/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": "M229 323 L819 323 L819 1293 L229 1293 Z",
+        "defect_box": {
+          "x1": 229.3,
+          "y1": 322.6,
+          "x2": 819.3,
+          "y2": 1292.6
+        },
+        "crop_box": {
+          "x1": 0.0,
+          "y1": 470.5,
+          "x2": 1080.0,
+          "y2": 1280.5
+        },
+        "pointer": {
+          "x": 655.5,
+          "y": 1358.4
+        },
+        "pointing_frame": "/media/items/itm_2b_09/pointing.jpg",
+        "hand_box": {
+          "x1": 618.2,
+          "y1": 1345.0,
+          "x2": 900.6,
+          "y2": 1920.0
+        },
+        "grounding": "sam_box",
+        "sam_concept": "window"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "meta-fallback",
+        "checked_at": "2026-11-03T15:41:51.750000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_15",
+        "quote": "Window screen, still missing.",
+        "after_t": 89.95,
+        "before_image_url": "/media/items/itm_2b_09/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_09/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_09/after_frame.jpg",
+        "before_after_url": null,
+        "voice_status": "not_fixed",
+        "vision_status": "still_visible",
+        "decision": "still_open",
+        "note": "Said not fixed, and the defect is still visible.",
+        "decided_at": "2026-11-04T13:21:15.800000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:27.300000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:51.750000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said. Checked by Muse Spark 1.3 after Baseten timed out."
+        },
+        {
+          "at": "2026-11-03T15:42:31.750000Z",
+          "actor": "system",
+          "action": "noted",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Not sent automatically: Slack didn't accept the message (no_service). Nothing was marked as sent; check the webhook in the trades directory or copy a link instead."
+        },
+        {
+          "at": "2026-11-04T13:21:15.800000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Said not fixed on the re-walk. Still open."
+        }
+      ],
+      "dispatch": null,
+      "created_at": "2026-11-03T15:41:27.300000Z",
+      "updated_at": "2026-11-04T13:21:15.800000Z"
+    },
+    {
+      "id": "itm_2b_10",
+      "project_id": "prj_unit2b",
+      "number": 10,
+      "origin_walk_id": "wlk_2b_first",
+      "point_id": "pnt_2b1_11",
+      "turn_ids": [
+        "trn_2b1_20"
+      ],
+      "title": "Sawdust on floor",
+      "description": "Sawdust on the living room floor by the window.",
+      "action": "Sweep the floor",
+      "trade": "cleaning",
+      "room": "Living room",
+      "location_detail": "Floor by the window",
+      "severity": "cosmetic",
+      "status": "closed",
+      "review_reason": null,
+      "quote": "And there's sawdust on the floor by the window, needs a sweep.",
+      "quote_start_s": 147.5,
+      "quote_end_s": 151.0,
+      "video_url": "/media/walks/wlk_2b_first/display.mp4",
+      "video_start_s": 145.5,
+      "video_end_s": 152.0,
+      "confidence": 0.83,
+      "evidence": {
+        "t": 149.45,
+        "image_url": "/media/items/itm_2b_10/evidence.jpg",
+        "raw_url": "/media/items/itm_2b_10/frame.jpg",
+        "crop_url": "/media/items/itm_2b_10/crop.jpg",
+        "width": 1080,
+        "height": 1920,
+        "defect_svg": null,
+        "defect_box": null,
+        "crop_box": {
+          "x1": 225.6,
+          "y1": 1162.5,
+          "x2": 854.0,
+          "y2": 1633.7
+        },
+        "pointer": {
+          "x": 597.5,
+          "y": 1485.2
+        },
+        "pointing_frame": "/media/items/itm_2b_10/pointing.jpg",
+        "hand_box": {
+          "x1": 551.7,
+          "y1": 1498.0,
+          "x2": 833.9,
+          "y2": 1920.0
+        },
+        "grounding": "pointed_only",
+        "sam_concept": "sawdust"
+      },
+      "verification": {
+        "consistent": true,
+        "note": "Matches the photo and what was said.",
+        "issues": [],
+        "provider": "baseten",
+        "checked_at": "2026-11-03T15:41:52.900000Z"
+      },
+      "closure": {
+        "rewalk_id": "wlk_2b_rewalk",
+        "rewalk_turn_id": "trn_2b2_16",
+        "quote": "Floor's swept, fixed.",
+        "after_t": 98.05,
+        "before_image_url": "/media/items/itm_2b_10/crop.jpg",
+        "after_image_url": "/media/items/itm_2b_10/after.jpg",
+        "after_frame_url": "/media/items/itm_2b_10/after_frame.jpg",
+        "before_after_url": "/media/items/itm_2b_10/before_after.jpg",
+        "voice_status": "fixed",
+        "vision_status": "fixed",
+        "decision": "signed_off",
+        "note": "The defect is gone where the inspector pointed.",
+        "decided_at": "2026-11-04T13:21:17.500000Z"
+      },
+      "history": [
+        {
+          "at": "2026-11-03T15:41:28.600000Z",
+          "actor": "model",
+          "action": "created",
+          "field": "status",
+          "from": null,
+          "to": "open",
+          "note": "Written by Muse Spark Open on Baseten."
+        },
+        {
+          "at": "2026-11-03T15:41:52.900000Z",
+          "actor": "model",
+          "action": "verified",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Matches the photo and what was said."
+        },
+        {
+          "at": "2026-11-03T15:42:02Z",
+          "actor": "system",
+          "action": "dispatched",
+          "field": "status",
+          "from": "open",
+          "to": "dispatched",
+          "note": "Emailed 3 items to Spotless Final Clean automatically: checked against the photo and the quote."
+        },
+        {
+          "at": "2026-11-04T13:21:17.500000Z",
+          "actor": "model",
+          "action": "rewalk_checked",
+          "field": null,
+          "from": null,
+          "to": null,
+          "note": "Marked fixed on the re-walk, and the defect is gone."
+        },
+        {
+          "at": "2026-11-04T13:21:17.700000Z",
+          "actor": "system",
+          "action": "status_changed",
+          "field": "status",
+          "from": "dispatched",
+          "to": "closed",
+          "note": "Signed off from the re-walk."
+        }
+      ],
+      "dispatch": {
+        "dispatch_id": "dsp_2b_02",
+        "trade": "cleaning",
+        "company": "Spotless Final Clean",
+        "channel": "email",
+        "sent_at": "2026-11-03T15:42:02Z",
+        "times_sent": 1
+      },
+      "created_at": "2026-11-03T15:41:28.600000Z",
+      "updated_at": "2026-11-04T13:21:17.700000Z"
+    }
+  ]
+}

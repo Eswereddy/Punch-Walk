@@ -1,0 +1,40 @@
+{
+  "project_id": "prj_unit2b",
+  "trade": "general",
+  "contact": {
+    "trade": "general",
+    "company": "Northfield Builders",
+    "contact": "Sam Okafor",
+    "email": null,
+    "phone": "(555) 010-2204",
+    "slack_channel": null,
+    "has_slack_webhook": false
+  },
+  "channel": "outbox",
+  "channel_reason": "Copy a link to share.",
+  "effective_channel": "outbox",
+  "effective_channel_label": "Copy a link to share.",
+  "channels": [
+    {
+      "channel": "outbox",
+      "available": true,
+      "destination": "Copy link",
+      "reason": null,
+      "label": "Copy a link to share."
+    }
+  ],
+  "to_review": [
+    {
+      "item_id": "itm_2b_12",
+      "number": 12,
+      "title": "Dent in closet door"
+    }
+  ],
+  "already_sent": [],
+  "heading": "Unit 2B final punch: 0 general items",
+  "lines": [],
+  "subject": "Unit 2B final punch: 0 general items",
+  "message_text": "Unit 2B final punch: 0 general items\n",
+  "slack_text": "*Unit 2B final punch: 0 general items*\n",
+  "item_ids": []
+}

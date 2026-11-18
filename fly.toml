@@ -1,0 +1,66 @@
+# Fly.io config for Punchwalk: one machine, one process, one volume at /data. Runbook: docs/DEPLOY.md.
+# If the app name "punchwalk" is taken, change `app` and APP_BASE_URL below (and the -a flags in the runbook).
+
+app = "punchwalk"
+primary_region = "ewr"
+kill_signal = "SIGTERM"
+kill_timeout = "30s"  # jobs interrupted by a restart are re-queued and resume on boot
+
+[build]
+  dockerfile = "Dockerfile"
+
+[deploy]
+  # One machine with one volume: replace it in place (a rolling deploy can't attach the volume twice).
+  strategy = "immediate"
+
+[env]
+  DATA_DIR = "/data"
+  DEMO_MODE = "true"
+  APP_BASE_URL = "https://punchwalk.fly.dev"
+  PUNCHWALK_CACHE = "readwrite"
+  FIXTURE_CACHE_DIR = "/app/fixtures/cache"
+  AUTO_SEND = "true"
+  PUNCHWALK_WORKER = "1"
+  REASONING_PROVIDER = "baseten"  # Muse Spark Open on Baseten; Muse Spark 1.3 only as the logged fallback
+  # Defect outlines v2 (PLAN 10.3-10.5): locate the defect itself, SAM 3.1 box/point prompts, scored and checked,
+  # evidence-frame picker for unpointed items. REGROUND_ALL stays unset: it only matters for an explicit re-ground.
+  GROUNDING_V2 = "1"
+  # Spend: a daily cap (America/New_York day) that a judge's upload only hits on a very busy day, and a
+  # total cap the demo can't reach. Budget left: /app/scripts/budget.py
+  COST_DAILY_CAP_USD = "10"
+  COST_CAP_USD = "60"
+  DEMO_UPLOADS_PER_HOUR = "6"
+  # Restore prj_demo from the baked snapshot on every boot (so every deploy) and nightly at 03:00 ET
+  DEMO_RESEED = "true"
+  DEMO_RESEED_AT = "03:00"
+  DEMO_SNAPSHOT = "/app/demo/seed_snapshot.tar.gz"
+  DEMO_RESET_TOKEN = "2026-11-04-a"  # change this value and deploy to wipe uploaded projects; the demo project is re-imported on boot
+  # Secrets (MODEL_API_KEY, BASETEN_API_KEY, SLACK_WEBHOOK_URL, RESEND_API_KEY, EMAIL_FROM) are set
+  # with `fly secrets import`, never here.
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = false  # the job worker runs in this process; a stopped machine drops uploads
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 50
+    hard_limit = 100
+
+  [[http_service.checks]]
+    grace_period = "20s"
+    interval = "15s"
+    method = "GET"
+    path = "/healthz"
+    timeout = "5s"
+
+[[mounts]]
+  source = "punchwalk_data"
+  destination = "/data"
+
+[[vm]]
+  size = "shared-cpu-2x"
+  memory = "2048mb"

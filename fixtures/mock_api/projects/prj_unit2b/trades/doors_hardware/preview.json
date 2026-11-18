@@ -1,0 +1,41 @@
+{
+  "project_id": "prj_unit2b",
+  "trade": "doors_hardware",
+  "contact": {
+    "trade": "doors_hardware",
+    "company": "Keystone Door & Hardware",
+    "contact": "Lena Brooks",
+    "email": "lena.brooks@example.com",
+    "phone": "(555) 010-2205",
+    "slack_channel": null,
+    "has_slack_webhook": false
+  },
+  "channel": "email",
+  "channel_reason": "Emails lena.brooks@example.com.",
+  "effective_channel": "email",
+  "effective_channel_label": "Emails lena.brooks@example.com.",
+  "channels": [
+    {
+      "channel": "email",
+      "available": true,
+      "destination": "lena.brooks@example.com",
+      "reason": null,
+      "label": "Emails lena.brooks@example.com."
+    },
+    {
+      "channel": "outbox",
+      "available": true,
+      "destination": "Copy link",
+      "reason": null,
+      "label": "Copy a link to share."
+    }
+  ],
+  "to_review": [],
+  "already_sent": [],
+  "heading": "Unit 2B final punch: 0 doors & hardware items",
+  "lines": [],
+  "subject": "Unit 2B final punch: 0 doors & hardware items",
+  "message_text": "Unit 2B final punch: 0 doors & hardware items\n",
+  "slack_text": "*Unit 2B final punch: 0 doors & hardware items*\n",
+  "item_ids": []
+}

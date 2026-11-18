@@ -1,0 +1,58 @@
+{
+  "token": "shr_b5d01b04eb",
+  "project_name": "Unit 3A turnover",
+  "project_address": "418 Alder Street, Unit 3A",
+  "number": 4,
+  "title": "Cabinet door rubs frame",
+  "description": "The sink base cabinet door rubs the frame when it closes.",
+  "action": "Adjust the hinges so the door clears the frame",
+  "trade": "carpentry_millwork",
+  "company": "Oakline Millwork",
+  "room": "Kitchen",
+  "location_detail": "Cabinet under the sink",
+  "severity": "functional",
+  "status": "open",
+  "quote": "Cabinet door under the sink rubs the frame when you close it.",
+  "quote_start_s": 53.0,
+  "quote_end_s": 56.8,
+  "video_url": "/media/walks/wlk_3a_first/display.mp4",
+  "video_start_s": 51.0,
+  "video_end_s": 57.8,
+  "evidence": {
+    "t": 54.95,
+    "image_url": "/media/items/itm_3a_04/evidence.jpg",
+    "raw_url": "/media/items/itm_3a_04/frame.jpg",
+    "crop_url": "/media/items/itm_3a_04/crop.jpg",
+    "width": 1920,
+    "height": 1080,
+    "defect_svg": "M922 277 L1012 277 L1012 412 L922 412 Z",
+    "defect_box": {
+      "x1": 921.8,
+      "y1": 277.2,
+      "x2": 1011.8,
+      "y2": 412.2
+    },
+    "crop_box": {
+      "x1": 727.1,
+      "y1": 181.8,
+      "x2": 1287.1,
+      "y2": 601.8
+    },
+    "pointer": {
+      "x": 1022.3,
+      "y": 436.3
+    },
+    "pointing_frame": "/media/items/itm_3a_04/pointing.jpg",
+    "hand_box": {
+      "x1": 983.1,
+      "y1": 448.2,
+      "x2": 1463.5,
+      "y2": 1080.0
+    },
+    "grounding": "sam_concept",
+    "sam_concept": "cabinet door edge"
+  },
+  "closure": null,
+  "walked_at": "2026-11-04T14:40:00Z",
+  "after_at": null
+}

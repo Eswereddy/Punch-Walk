@@ -1,0 +1,53 @@
+{
+  "token": "shr_bc1e075d53",
+  "project_name": "Unit 2B final punch",
+  "project_address": "418 Alder Street, Unit 2B",
+  "number": 12,
+  "title": "Dent in closet door",
+  "description": "The bedroom closet door has a dent near the bottom.",
+  "action": "Repair the dent and touch up the door",
+  "trade": "general",
+  "company": "Northfield Builders",
+  "room": "Bedroom",
+  "location_detail": "Bottom of the closet door",
+  "severity": "cosmetic",
+  "status": "needs_review",
+  "quote": "Closet door's got a dent down at the bottom.",
+  "quote_start_s": 119.0,
+  "quote_end_s": 122.0,
+  "video_url": "/media/walks/wlk_2b_first/display.mp4",
+  "video_start_s": 117.0,
+  "video_end_s": 123.0,
+  "evidence": {
+    "t": 120.75,
+    "image_url": "/media/items/itm_2b_12/evidence.jpg",
+    "raw_url": "/media/items/itm_2b_12/frame.jpg",
+    "crop_url": "/media/items/itm_2b_12/crop.jpg",
+    "width": 1080,
+    "height": 1920,
+    "defect_svg": null,
+    "defect_box": null,
+    "crop_box": {
+      "x1": 128.2,
+      "y1": 1075.6,
+      "x2": 968.2,
+      "y2": 1705.6
+    },
+    "pointer": {
+      "x": 568.2,
+      "y": 1450.6
+    },
+    "pointing_frame": "/media/items/itm_2b_12/pointing.jpg",
+    "hand_box": {
+      "x1": 525.1,
+      "y1": 1437.7,
+      "x2": 833.1,
+      "y2": 1920.0
+    },
+    "grounding": "pointed_only",
+    "sam_concept": "door dent"
+  },
+  "closure": null,
+  "walked_at": "2026-11-03T15:12:00Z",
+  "after_at": null
+}

@@ -1,0 +1,72 @@
+{
+  "token": "shr_97cab565f7",
+  "project_name": "Unit 2B final punch",
+  "project_address": "418 Alder Street, Unit 2B",
+  "number": 2,
+  "title": "Coffee drips on counter",
+  "description": "Dried coffee drips on the counter next to the stove.",
+  "action": "Clean the counter",
+  "trade": "cleaning",
+  "company": "Spotless Final Clean",
+  "room": "Kitchen",
+  "location_detail": "Counter next to the stove",
+  "severity": "cosmetic",
+  "status": "needs_review",
+  "quote": "Coffee drips on the counter next to the stove, needs a wipe.",
+  "quote_start_s": 27.0,
+  "quote_end_s": 30.4,
+  "video_url": "/media/walks/wlk_2b_first/display.mp4",
+  "video_start_s": 25.0,
+  "video_end_s": 31.4,
+  "evidence": {
+    "t": 28.65,
+    "image_url": "/media/items/itm_2b_02/evidence.jpg",
+    "raw_url": "/media/items/itm_2b_02/frame.jpg",
+    "crop_url": "/media/items/itm_2b_02/crop.jpg",
+    "width": 1080,
+    "height": 1920,
+    "defect_svg": "M660 1426 L655 1456 L639 1482 L615 1503 L584 1517 L550 1521 L516 1517 L486 1503 L461 1482 L446 1456 L440 1426 L446 1397 L461 1371 L486 1350 L516 1336 L550 1331 L584 1336 L615 1350 L639 1371 L655 1397 Z",
+    "defect_box": {
+      "x1": 440.3,
+      "y1": 1331.4,
+      "x2": 660.3,
+      "y2": 1521.4
+    },
+    "crop_box": {
+      "x1": 275.7,
+      "y1": 1259.7,
+      "x2": 835.7,
+      "y2": 1679.7
+    },
+    "pointer": {
+      "x": 601.0,
+      "y": 1538.1
+    },
+    "pointing_frame": "/media/items/itm_2b_02/pointing.jpg",
+    "hand_box": {
+      "x1": 579.7,
+      "y1": 1540.8,
+      "x2": 847.4,
+      "y2": 1920.0
+    },
+    "grounding": "sam_concept",
+    "sam_concept": "coffee stain"
+  },
+  "closure": {
+    "rewalk_id": "wlk_2b_rewalk",
+    "rewalk_turn_id": "trn_2b2_04",
+    "quote": "Coffee drips on the counter, fixed.",
+    "after_t": 19.75,
+    "before_image_url": "/media/items/itm_2b_02/crop.jpg",
+    "after_image_url": "/media/items/itm_2b_02/after.jpg",
+    "after_frame_url": "/media/items/itm_2b_02/after_frame.jpg",
+    "before_after_url": "/media/items/itm_2b_02/before_after.jpg",
+    "voice_status": "fixed",
+    "vision_status": "still_visible",
+    "decision": "needs_review",
+    "note": "Coffee drips are still visible where the inspector pointed.",
+    "decided_at": "2026-11-04T13:21:03.900000Z"
+  },
+  "walked_at": "2026-11-03T15:12:00Z",
+  "after_at": "2026-11-04T13:05:00Z"
+}

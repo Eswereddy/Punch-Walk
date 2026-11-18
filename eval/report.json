@@ -1,0 +1,275 @@
+{
+  "labels_dir": "eval/labels",
+  "cache_mode": "readonly",
+  "rooms": [
+    "Kitchen",
+    "Bathroom",
+    "Bedroom",
+    "Hallway",
+    "Living room"
+  ],
+  "walks": [
+    {
+      "walk": "walk1",
+      "walk_id": "wlk_eval_walk1",
+      "kind": "initial",
+      "holdout": false,
+      "labels": 12,
+      "items": 12,
+      "error": null,
+      "metrics": {
+        "recall": {
+          "num": 12,
+          "den": 12,
+          "value": 1.0
+        },
+        "precision": {
+          "num": 12,
+          "den": 12,
+          "value": 1.0
+        },
+        "trade": {
+          "num": 12,
+          "den": 12,
+          "value": 1.0
+        },
+        "room": {
+          "num": 12,
+          "den": 12,
+          "value": 1.0
+        },
+        "grounding": {
+          "num": 10,
+          "den": 11,
+          "value": 0.9091
+        },
+        "needs_review": {
+          "num": 3,
+          "den": 12,
+          "value": 0.25
+        }
+      }
+    },
+    {
+      "walk": "walk2",
+      "walk_id": "wlk_eval_walk2",
+      "kind": "rewalk",
+      "holdout": false,
+      "labels": 12,
+      "items": 0,
+      "error": null,
+      "metrics": {
+        "pending": false,
+        "closure": {
+          "num": 11,
+          "den": 12,
+          "value": 0.9167
+        },
+        "false_claim": {
+          "num": 2,
+          "den": 2,
+          "value": 1.0
+        }
+      }
+    },
+    {
+      "walk": "walk3",
+      "walk_id": "wlk_eval_walk3",
+      "kind": "initial",
+      "holdout": true,
+      "labels": 2,
+      "items": 2,
+      "error": null,
+      "metrics": {
+        "recall": {
+          "num": 2,
+          "den": 2,
+          "value": 1.0
+        },
+        "precision": {
+          "num": 2,
+          "den": 2,
+          "value": 1.0
+        },
+        "trade": {
+          "num": 2,
+          "den": 2,
+          "value": 1.0
+        },
+        "room": {
+          "num": 2,
+          "den": 2,
+          "value": 1.0
+        },
+        "grounding": {
+          "num": 1,
+          "den": 2,
+          "value": 0.5
+        },
+        "needs_review": {
+          "num": 1,
+          "den": 2,
+          "value": 0.5
+        }
+      }
+    }
+  ],
+  "summary": [
+    {
+      "walk": "walk1",
+      "key": "recall",
+      "metric": "Recall",
+      "value": "1.00 (12/12)",
+      "target": ">= 0.90",
+      "result": "pass",
+      "holdout": false
+    },
+    {
+      "walk": "walk1",
+      "key": "precision",
+      "metric": "Precision",
+      "value": "1.00 (12/12)",
+      "target": ">= 0.90",
+      "result": "pass",
+      "holdout": false
+    },
+    {
+      "walk": "walk1",
+      "key": "trade",
+      "metric": "Trade accuracy",
+      "value": "1.00 (12/12)",
+      "target": ">= 0.85",
+      "result": "pass",
+      "holdout": false
+    },
+    {
+      "walk": "walk1",
+      "key": "room",
+      "metric": "Room accuracy",
+      "value": "1.00 (12/12)",
+      "target": ">= 0.90",
+      "result": "pass",
+      "holdout": false
+    },
+    {
+      "walk": "walk1",
+      "key": "grounding",
+      "metric": "Grounding rate (pointed)",
+      "value": "0.91 (10/11)",
+      "target": "-",
+      "result": "-",
+      "holdout": false
+    },
+    {
+      "walk": "walk1",
+      "key": "needs_review",
+      "metric": "Needs-review rate",
+      "value": "0.25 (3/12)",
+      "target": "-",
+      "result": "-",
+      "holdout": false
+    },
+    {
+      "walk": "walk2",
+      "key": "closure",
+      "metric": "Closure accuracy",
+      "value": "0.92 (11/12)",
+      "target": ">= 0.90",
+      "result": "pass",
+      "holdout": false
+    },
+    {
+      "walk": "walk2",
+      "key": "false_claim",
+      "metric": "False-claim catch",
+      "value": "1.00 (2/2)",
+      "target": "= 1.00",
+      "result": "pass",
+      "holdout": false
+    },
+    {
+      "walk": "walk3",
+      "key": "recall",
+      "metric": "Recall",
+      "value": "1.00 (2/2)",
+      "target": ">= 0.90",
+      "result": "pass",
+      "holdout": true
+    },
+    {
+      "walk": "walk3",
+      "key": "precision",
+      "metric": "Precision",
+      "value": "1.00 (2/2)",
+      "target": ">= 0.90",
+      "result": "pass",
+      "holdout": true
+    },
+    {
+      "walk": "walk3",
+      "key": "trade",
+      "metric": "Trade accuracy",
+      "value": "1.00 (2/2)",
+      "target": ">= 0.85",
+      "result": "pass",
+      "holdout": true
+    },
+    {
+      "walk": "walk3",
+      "key": "room",
+      "metric": "Room accuracy",
+      "value": "1.00 (2/2)",
+      "target": ">= 0.90",
+      "result": "pass",
+      "holdout": true
+    },
+    {
+      "walk": "walk3",
+      "key": "grounding",
+      "metric": "Grounding rate (pointed)",
+      "value": "0.50 (1/2)",
+      "target": "-",
+      "result": "-",
+      "holdout": true
+    },
+    {
+      "walk": "walk3",
+      "key": "needs_review",
+      "metric": "Needs-review rate",
+      "value": "0.50 (1/2)",
+      "target": "-",
+      "result": "-",
+      "holdout": true
+    }
+  ],
+  "app_summary": {
+    "source": "eval/report.md",
+    "updated_at": "2026-11-04T09:35:03.539952Z",
+    "metrics": [
+      {
+        "key": "defects_found",
+        "label": "Defects found",
+        "value": 12,
+        "total": 12
+      },
+      {
+        "key": "right_trade",
+        "label": "Right trade",
+        "value": 12,
+        "total": 12
+      },
+      {
+        "key": "right_room",
+        "label": "Right room",
+        "value": 12,
+        "total": 12
+      },
+      {
+        "key": "false_claims_caught",
+        "label": "False \"fixed\" claims caught",
+        "value": 2,
+        "total": 2
+      }
+    ]
+  }
+}

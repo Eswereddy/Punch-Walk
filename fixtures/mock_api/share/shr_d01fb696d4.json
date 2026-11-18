@@ -1,0 +1,72 @@
+{
+  "token": "shr_d01fb696d4",
+  "project_name": "Unit 2B final punch",
+  "project_address": "418 Alder Street, Unit 2B",
+  "number": 6,
+  "title": "Door doesn't latch",
+  "description": "The bedroom door doesn't latch when it's closed.",
+  "action": "Adjust the strike plate so the door latches",
+  "trade": "doors_hardware",
+  "company": "Keystone Door & Hardware",
+  "room": "Bedroom",
+  "location_detail": "Bedroom door",
+  "severity": "functional",
+  "status": "closed",
+  "quote": "Bedroom door won't latch when you close it.",
+  "quote_start_s": 92.0,
+  "quote_end_s": 95.4,
+  "video_url": "/media/walks/wlk_2b_first/display.mp4",
+  "video_start_s": 90.0,
+  "video_end_s": 96.4,
+  "evidence": {
+    "t": 94.05,
+    "image_url": "/media/items/itm_2b_06/evidence.jpg",
+    "raw_url": "/media/items/itm_2b_06/frame.jpg",
+    "crop_url": "/media/items/itm_2b_06/crop.jpg",
+    "width": 1080,
+    "height": 1920,
+    "defect_svg": "M852 1008 L912 1008 L912 1154 L852 1154 Z",
+    "defect_box": {
+      "x1": 851.8,
+      "y1": 1008.1,
+      "x2": 911.8,
+      "y2": 1154.1
+    },
+    "crop_box": {
+      "x1": 520.0,
+      "y1": 919.2,
+      "x2": 1080.0,
+      "y2": 1339.2
+    },
+    "pointer": {
+      "x": 882.0,
+      "y": 1180.2
+    },
+    "pointing_frame": "/media/items/itm_2b_06/pointing.jpg",
+    "hand_box": {
+      "x1": 745.9,
+      "y1": 1182.1,
+      "x2": 983.9,
+      "y2": 1920.0
+    },
+    "grounding": "sam_concept",
+    "sam_concept": "door strike plate"
+  },
+  "closure": {
+    "rewalk_id": "wlk_2b_rewalk",
+    "rewalk_turn_id": "trn_2b2_10",
+    "quote": "Bedroom door latches now, fixed.",
+    "after_t": 58.65,
+    "before_image_url": "/media/items/itm_2b_06/crop.jpg",
+    "after_image_url": "/media/items/itm_2b_06/after.jpg",
+    "after_frame_url": "/media/items/itm_2b_06/after_frame.jpg",
+    "before_after_url": "/media/items/itm_2b_06/before_after.jpg",
+    "voice_status": "fixed",
+    "vision_status": "fixed",
+    "decision": "signed_off",
+    "note": "The defect is gone where the inspector pointed.",
+    "decided_at": "2026-11-04T13:21:10.700000Z"
+  },
+  "walked_at": "2026-11-03T15:12:00Z",
+  "after_at": "2026-11-04T13:05:00Z"
+}

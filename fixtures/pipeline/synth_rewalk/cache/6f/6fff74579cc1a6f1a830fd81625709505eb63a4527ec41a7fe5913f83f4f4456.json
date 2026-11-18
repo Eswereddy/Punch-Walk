@@ -1,0 +1,54 @@
+{
+ "key": "6fff74579cc1a6f1a830fd81625709505eb63a4527ec41a7fe5913f83f4f4456",
+ "provider": "baseten",
+ "endpoint": "/chat/completions",
+ "model": "meta-models/muse-spark-open",
+ "description": "structured(FixCheck) stage=resolve_closures format=json_schema",
+ "created_at": "2026-11-04T01:12:22+00:00",
+ "meta": {},
+ "response": {
+  "id": "chatcmpl-aeaa1dc140ec4c04828db509c777da9b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"defect_still_present\": \"unclear\", \"note\": \"Both photos are very small/zoomed-out and blurry.\", \"rationale\": \"Cannot tell from re-walk image if plate is now level and straight; not enough detail to judge tilt.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null
+    }
+   }
+  ],
+  "created": 1793754739,
+  "model": "meta-models/muse-spark-open",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+   "completion_tokens": 657,
+   "prompt_tokens": 741,
+   "total_tokens": 1398,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": 438,
+    "audio_tokens": 0,
+    "reasoning_tokens": 591,
+    "rejected_prediction_tokens": 1095,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cache_write_tokens": null,
+    "cached_tokens": 256,
+    "image_tokens": null,
+    "text_tokens": null
+   }
+  }
+ }
+}

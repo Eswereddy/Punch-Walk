@@ -1,0 +1,148 @@
+{
+  "id": "itm_2b_07",
+  "project_id": "prj_unit2b",
+  "number": 7,
+  "origin_walk_id": "wlk_2b_first",
+  "point_id": "pnt_2b1_07",
+  "turn_ids": [
+    "trn_2b1_13"
+  ],
+  "title": "Scuff marks on wall",
+  "description": "Scuff marks on the bedroom wall to the left of the closet door.",
+  "action": "Touch up the paint",
+  "trade": "painting",
+  "room": "Bedroom",
+  "location_detail": "Left of the closet door",
+  "severity": "cosmetic",
+  "status": "dispatched",
+  "review_reason": null,
+  "quote": "Scuff marks on the wall left of the closet door.",
+  "quote_start_s": 104.0,
+  "quote_end_s": 107.0,
+  "video_url": "/media/walks/wlk_2b_first/display.mp4",
+  "video_start_s": 102.0,
+  "video_end_s": 108.0,
+  "confidence": 0.94,
+  "evidence": {
+    "t": 105.85,
+    "image_url": "/media/items/itm_2b_07/evidence.jpg",
+    "raw_url": "/media/items/itm_2b_07/frame.jpg",
+    "crop_url": "/media/items/itm_2b_07/crop.jpg",
+    "width": 1080,
+    "height": 1920,
+    "defect_svg": "M517 996 L510 1020 L488 1042 L455 1059 L413 1070 L367 1074 L321 1070 L279 1059 L246 1042 L224 1020 L217 996 L224 972 L246 950 L279 933 L321 922 L367 918 L413 922 L455 933 L488 950 L510 972 Z",
+    "defect_box": {
+      "x1": 217.0,
+      "y1": 918.0,
+      "x2": 517.0,
+      "y2": 1074.0
+    },
+    "crop_box": {
+      "x1": 87.0,
+      "y1": 836.5,
+      "x2": 647.0,
+      "y2": 1256.5
+    },
+    "pointer": {
+      "x": 411.5,
+      "y": 1105.0
+    },
+    "pointing_frame": "/media/items/itm_2b_07/pointing.jpg",
+    "hand_box": {
+      "x1": 409.1,
+      "y1": 1109.7,
+      "x2": 847.4,
+      "y2": 1920.0
+    },
+    "grounding": "sam_concept",
+    "sam_concept": "wall scuff mark"
+  },
+  "verification": {
+    "consistent": true,
+    "note": "Matches the photo and what was said.",
+    "issues": [],
+    "provider": "baseten",
+    "checked_at": "2026-11-03T15:41:49.450000Z"
+  },
+  "closure": {
+    "rewalk_id": "wlk_2b_rewalk",
+    "rewalk_turn_id": "trn_2b2_11",
+    "quote": "Bedroom scuffs, still there.",
+    "after_t": 66.75,
+    "before_image_url": "/media/items/itm_2b_07/crop.jpg",
+    "after_image_url": "/media/items/itm_2b_07/after.jpg",
+    "after_frame_url": "/media/items/itm_2b_07/after_frame.jpg",
+    "before_after_url": null,
+    "voice_status": "not_fixed",
+    "vision_status": "still_visible",
+    "decision": "still_open",
+    "note": "Said not fixed, and the defect is still visible.",
+    "decided_at": "2026-11-04T13:21:12.400000Z"
+  },
+  "history": [
+    {
+      "at": "2026-11-03T15:41:24.700000Z",
+      "actor": "model",
+      "action": "created",
+      "field": "status",
+      "from": null,
+      "to": "open",
+      "note": "Written by Muse Spark Open on Baseten."
+    },
+    {
+      "at": "2026-11-03T15:41:49.450000Z",
+      "actor": "model",
+      "action": "verified",
+      "field": null,
+      "from": null,
+      "to": null,
+      "note": "Matches the photo and what was said."
+    },
+    {
+      "at": "2026-11-03T15:42:05Z",
+      "actor": "system",
+      "action": "dispatched",
+      "field": "status",
+      "from": "open",
+      "to": "dispatched",
+      "note": "Emailed 1 item to Brightline Painting automatically: checked against the photo and the quote."
+    },
+    {
+      "at": "2026-11-04T13:21:12.400000Z",
+      "actor": "model",
+      "action": "rewalk_checked",
+      "field": null,
+      "from": null,
+      "to": null,
+      "note": "Said not fixed on the re-walk. Still open."
+    },
+    {
+      "at": "2026-11-04T13:21:12.600000Z",
+      "actor": "system",
+      "action": "status_changed",
+      "field": "status",
+      "from": "dispatched",
+      "to": "open",
+      "note": "Still open after the re-walk."
+    },
+    {
+      "at": "2026-11-04T13:25:30Z",
+      "actor": "human",
+      "action": "dispatched",
+      "field": "status",
+      "from": "open",
+      "to": "dispatched",
+      "note": "Emailed 1 item to Brightline Painting"
+    }
+  ],
+  "dispatch": {
+    "dispatch_id": "dsp_2b_08",
+    "trade": "painting",
+    "company": "Brightline Painting",
+    "channel": "email",
+    "sent_at": "2026-11-04T13:25:30Z",
+    "times_sent": 2
+  },
+  "created_at": "2026-11-03T15:41:24.700000Z",
+  "updated_at": "2026-11-04T13:25:30Z"
+}

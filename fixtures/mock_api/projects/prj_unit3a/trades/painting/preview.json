@@ -1,0 +1,41 @@
+{
+  "project_id": "prj_unit3a",
+  "trade": "painting",
+  "contact": {
+    "trade": "painting",
+    "company": "Brightline Painting",
+    "contact": "Tom Reyes",
+    "email": "tom.reyes@example.com",
+    "phone": "(555) 010-2206",
+    "slack_channel": null,
+    "has_slack_webhook": false
+  },
+  "channel": "email",
+  "channel_reason": "Emails tom.reyes@example.com.",
+  "effective_channel": "email",
+  "effective_channel_label": "Emails tom.reyes@example.com.",
+  "channels": [
+    {
+      "channel": "email",
+      "available": true,
+      "destination": "tom.reyes@example.com",
+      "reason": null,
+      "label": "Emails tom.reyes@example.com."
+    },
+    {
+      "channel": "outbox",
+      "available": true,
+      "destination": "Copy link",
+      "reason": null,
+      "label": "Copy a link to share."
+    }
+  ],
+  "to_review": [],
+  "already_sent": [],
+  "heading": "Unit 3A turnover: 0 painting items",
+  "lines": [],
+  "subject": "Unit 3A turnover: 0 painting items",
+  "message_text": "Unit 3A turnover: 0 painting items\n",
+  "slack_text": "*Unit 3A turnover: 0 painting items*\n",
+  "item_ids": []
+}

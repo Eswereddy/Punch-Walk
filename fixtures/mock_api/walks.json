@@ -1,0 +1,610 @@
+{
+  "walks": [
+    {
+      "id": "wlk_3a_first",
+      "project_id": "prj_unit3a",
+      "project_name": "Unit 3A turnover",
+      "kind": "initial",
+      "status": "processing",
+      "rewalk_of": null,
+      "job_id": "job_3a_first",
+      "recorded_at": "2026-11-04T14:40:00Z",
+      "created_at": "2026-11-04T14:52:00Z",
+      "updated_at": "2026-11-04T14:53:03.200000Z",
+      "clips": [
+        {
+          "order": 0,
+          "filename": "walk3.mov",
+          "duration_s": 78.0,
+          "offset_s": 0.0
+        }
+      ],
+      "stages": [
+        {
+          "stage": "ingest",
+          "label": "Preparing the video",
+          "status": "done",
+          "started_at": "2026-11-04T14:52:05Z",
+          "finished_at": "2026-11-04T14:52:12.400000Z",
+          "duration_ms": 7400,
+          "counts": {
+            "clips": 1
+          },
+          "progress": null,
+          "detail": "1 clip, 1 min 18 s",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "transcribe",
+          "label": "Listening to the walk",
+          "status": "done",
+          "started_at": "2026-11-04T14:52:12.400000Z",
+          "finished_at": "2026-11-04T14:52:18.300000Z",
+          "duration_ms": 5900,
+          "counts": {
+            "lines": 10
+          },
+          "progress": null,
+          "detail": "Muse Voice Transcribe found 10 lines",
+          "model_label": "Muse Voice Transcribe",
+          "message": null
+        },
+        {
+          "stage": "classify_turns",
+          "label": "Sorting what was said",
+          "status": "done",
+          "started_at": "2026-11-04T14:52:18.300000Z",
+          "finished_at": "2026-11-04T14:52:22.200000Z",
+          "duration_ms": 3900,
+          "counts": {
+            "lines": 10
+          },
+          "progress": null,
+          "detail": "Muse Spark Open on Baseten sorted 10 lines",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "track_hands",
+          "label": "Following your hand (SAM 3.1)",
+          "status": "done",
+          "started_at": "2026-11-04T14:52:22.200000Z",
+          "finished_at": "2026-11-04T14:52:51.800000Z",
+          "duration_ms": 29600,
+          "counts": {
+            "frames": 780,
+            "hands": 4
+          },
+          "progress": null,
+          "detail": "4 points found",
+          "model_label": "SAM 3.1",
+          "message": null
+        },
+        {
+          "stage": "find_points",
+          "label": "Finding where you pointed",
+          "status": "done",
+          "started_at": "2026-11-04T14:52:51.800000Z",
+          "finished_at": "2026-11-04T14:52:52.200000Z",
+          "duration_ms": 400,
+          "counts": {
+            "points": 4,
+            "mentions": 4,
+            "voice_only": 0
+          },
+          "progress": null,
+          "detail": "4 places you pointed",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "fuse",
+          "label": "Matching what was said to each point",
+          "status": "done",
+          "started_at": "2026-11-04T14:52:52.200000Z",
+          "finished_at": "2026-11-04T14:52:52.300000Z",
+          "duration_ms": 100,
+          "counts": {
+            "items": 4,
+            "pointed": 4,
+            "voice_only": 0
+          },
+          "progress": null,
+          "detail": "4 matched to where you pointed",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "pick_evidence",
+          "label": "Picking the clearest photo",
+          "status": "done",
+          "started_at": "2026-11-04T14:52:52.300000Z",
+          "finished_at": "2026-11-04T14:52:55.600000Z",
+          "duration_ms": 3300,
+          "counts": {
+            "photos": 4
+          },
+          "progress": null,
+          "detail": "4 photos picked",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "write_items",
+          "label": "Writing items",
+          "status": "running",
+          "started_at": "2026-11-04T14:52:55.600000Z",
+          "finished_at": null,
+          "duration_ms": null,
+          "counts": {
+            "written": 2,
+            "total": 4
+          },
+          "progress": 0.5,
+          "detail": "Muse Spark Open on Baseten, 2 of 4 written",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "ground_defects",
+          "label": "Outlining each defect",
+          "status": "pending",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "counts": {},
+          "progress": null,
+          "detail": "SAM 3.1, waiting",
+          "model_label": "SAM 3.1",
+          "message": null
+        },
+        {
+          "stage": "verify",
+          "label": "Checking each item against its photo",
+          "status": "pending",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "counts": {},
+          "progress": null,
+          "detail": "Muse Spark Open on Baseten, waiting",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "persist",
+          "label": "Saving the punch list",
+          "status": "pending",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "counts": {},
+          "progress": null,
+          "detail": null,
+          "model_label": null,
+          "message": null
+        }
+      ],
+      "media": {
+        "display_mp4": "/media/walks/wlk_3a_first/display.mp4",
+        "poster": "/media/walks/wlk_3a_first/poster.jpg"
+      },
+      "duration_s": 78.0,
+      "fps": 30.0,
+      "width": 1920,
+      "height": 1080,
+      "orientation": "landscape",
+      "device": "phone",
+      "error": null,
+      "counts": {
+        "items": 2,
+        "points": 4,
+        "turns": 10,
+        "needs_review": 0,
+        "signed_off": 0,
+        "still_open": 2,
+        "not_checked": 0
+      }
+    },
+    {
+      "id": "wlk_2b_rewalk",
+      "project_id": "prj_unit2b",
+      "project_name": "Unit 2B final punch",
+      "kind": "rewalk",
+      "status": "ready",
+      "rewalk_of": "wlk_2b_first",
+      "job_id": "job_2b_rewalk",
+      "recorded_at": "2026-11-04T13:05:00Z",
+      "created_at": "2026-11-04T13:20:00Z",
+      "updated_at": "2026-11-04T13:21:15.700000Z",
+      "clips": [
+        {
+          "order": 0,
+          "filename": "walk2.mp4",
+          "duration_s": 104.0,
+          "offset_s": 0.0
+        }
+      ],
+      "stages": [
+        {
+          "stage": "ingest",
+          "label": "Preparing the video",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:05Z",
+          "finished_at": "2026-11-04T13:20:11.100000Z",
+          "duration_ms": 6100,
+          "counts": {
+            "clips": 1
+          },
+          "progress": null,
+          "detail": "1 clip, 1 min 44 s",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "transcribe",
+          "label": "Listening to the walk",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:11.100000Z",
+          "finished_at": "2026-11-04T13:20:16.300000Z",
+          "duration_ms": 5200,
+          "counts": {
+            "lines": 17
+          },
+          "progress": null,
+          "detail": "Muse Voice Transcribe found 17 lines",
+          "model_label": "Muse Voice Transcribe",
+          "message": null
+        },
+        {
+          "stage": "classify_turns",
+          "label": "Sorting what was said",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:16.300000Z",
+          "finished_at": "2026-11-04T13:20:20.400000Z",
+          "duration_ms": 4100,
+          "counts": {
+            "lines": 17
+          },
+          "progress": null,
+          "detail": "Muse Spark Open on Baseten sorted 17 lines",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "track_hands",
+          "label": "Following your hand (SAM 3.1)",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:20.400000Z",
+          "finished_at": "2026-11-04T13:20:52.200000Z",
+          "duration_ms": 31800,
+          "counts": {
+            "frames": 1040,
+            "hands": 10
+          },
+          "progress": null,
+          "detail": "10 points found",
+          "model_label": "SAM 3.1",
+          "message": null
+        },
+        {
+          "stage": "find_points",
+          "label": "Finding where you pointed",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:52.200000Z",
+          "finished_at": "2026-11-04T13:20:52.900000Z",
+          "duration_ms": 700,
+          "counts": {
+            "points": 10,
+            "mentions": 10,
+            "voice_only": 0
+          },
+          "progress": null,
+          "detail": "10 places you pointed",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "fuse",
+          "label": "Matching what was said to each point",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:52.900000Z",
+          "finished_at": "2026-11-04T13:20:53Z",
+          "duration_ms": 100,
+          "counts": {
+            "status_updates": 10
+          },
+          "progress": null,
+          "detail": "10 status updates",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "pick_evidence",
+          "label": "Picking the clearest photo",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:53Z",
+          "finished_at": "2026-11-04T13:20:55.900000Z",
+          "duration_ms": 2900,
+          "counts": {
+            "photos": 10
+          },
+          "progress": null,
+          "detail": "10 photos picked",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "resolve_closures",
+          "label": "Checking what was fixed",
+          "status": "done",
+          "started_at": "2026-11-04T13:20:55.900000Z",
+          "finished_at": "2026-11-04T13:21:15.300000Z",
+          "duration_ms": 19400,
+          "counts": {
+            "signed_off": 6,
+            "still_open": 3,
+            "needs_review": 1
+          },
+          "progress": null,
+          "detail": "6 signed off, 3 still open, 1 needs a look",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "persist",
+          "label": "Saving the punch list",
+          "status": "done",
+          "started_at": "2026-11-04T13:21:15.300000Z",
+          "finished_at": "2026-11-04T13:21:15.700000Z",
+          "duration_ms": 400,
+          "counts": {},
+          "progress": null,
+          "detail": "Saved",
+          "model_label": null,
+          "message": null
+        }
+      ],
+      "media": {
+        "display_mp4": "/media/walks/wlk_2b_rewalk/display.mp4",
+        "poster": "/media/walks/wlk_2b_rewalk/poster.jpg"
+      },
+      "duration_s": 104.0,
+      "fps": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "orientation": "portrait",
+      "device": "glasses",
+      "error": null,
+      "counts": {
+        "items": 10,
+        "points": 10,
+        "turns": 17,
+        "needs_review": 1,
+        "signed_off": 6,
+        "still_open": 3,
+        "not_checked": 1
+      }
+    },
+    {
+      "id": "wlk_2b_first",
+      "project_id": "prj_unit2b",
+      "project_name": "Unit 2B final punch",
+      "kind": "initial",
+      "status": "ready",
+      "rewalk_of": null,
+      "job_id": "job_2b_first",
+      "recorded_at": "2026-11-03T15:12:00Z",
+      "created_at": "2026-11-03T15:40:00Z",
+      "updated_at": "2026-11-03T15:41:56.600000Z",
+      "clips": [
+        {
+          "order": 0,
+          "filename": "walk1_a.mp4",
+          "duration_s": 82.4,
+          "offset_s": 0.0
+        },
+        {
+          "order": 1,
+          "filename": "walk1_b.mp4",
+          "duration_s": 71.1,
+          "offset_s": 82.4
+        }
+      ],
+      "stages": [
+        {
+          "stage": "ingest",
+          "label": "Preparing the video",
+          "status": "done",
+          "started_at": "2026-11-03T15:40:05Z",
+          "finished_at": "2026-11-03T15:40:14.200000Z",
+          "duration_ms": 9200,
+          "counts": {
+            "clips": 2
+          },
+          "progress": null,
+          "detail": "2 clips, 2 min 34 s",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "transcribe",
+          "label": "Listening to the walk",
+          "status": "done",
+          "started_at": "2026-11-03T15:40:14.200000Z",
+          "finished_at": "2026-11-03T15:40:21.300000Z",
+          "duration_ms": 7100,
+          "counts": {
+            "lines": 21
+          },
+          "progress": null,
+          "detail": "Muse Voice Transcribe found 21 lines",
+          "model_label": "Muse Voice Transcribe",
+          "message": null
+        },
+        {
+          "stage": "classify_turns",
+          "label": "Sorting what was said",
+          "status": "done",
+          "started_at": "2026-11-03T15:40:21.300000Z",
+          "finished_at": "2026-11-03T15:40:26.100000Z",
+          "duration_ms": 4800,
+          "counts": {
+            "lines": 21
+          },
+          "progress": null,
+          "detail": "Muse Spark Open on Baseten sorted 21 lines",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "track_hands",
+          "label": "Following your hand (SAM 3.1)",
+          "status": "done",
+          "started_at": "2026-11-03T15:40:26.100000Z",
+          "finished_at": "2026-11-03T15:41:10.500000Z",
+          "duration_ms": 44400,
+          "counts": {
+            "frames": 1535,
+            "hands": 11
+          },
+          "progress": null,
+          "detail": "11 points found",
+          "model_label": "SAM 3.1",
+          "message": null
+        },
+        {
+          "stage": "find_points",
+          "label": "Finding where you pointed",
+          "status": "done",
+          "started_at": "2026-11-03T15:41:10.500000Z",
+          "finished_at": "2026-11-03T15:41:11.600000Z",
+          "duration_ms": 1100,
+          "counts": {
+            "points": 11,
+            "mentions": 12,
+            "voice_only": 1
+          },
+          "progress": null,
+          "detail": "11 places you pointed, 1 described without pointing",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "fuse",
+          "label": "Matching what was said to each point",
+          "status": "done",
+          "started_at": "2026-11-03T15:41:11.600000Z",
+          "finished_at": "2026-11-03T15:41:11.700000Z",
+          "duration_ms": 100,
+          "counts": {
+            "items": 12,
+            "pointed": 11,
+            "voice_only": 1
+          },
+          "progress": null,
+          "detail": "11 matched to where you pointed, 1 described without pointing",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "pick_evidence",
+          "label": "Picking the clearest photo",
+          "status": "done",
+          "started_at": "2026-11-03T15:41:11.700000Z",
+          "finished_at": "2026-11-03T15:41:15.600000Z",
+          "duration_ms": 3900,
+          "counts": {
+            "photos": 12
+          },
+          "progress": null,
+          "detail": "12 photos picked",
+          "model_label": null,
+          "message": null
+        },
+        {
+          "stage": "write_items",
+          "label": "Writing items",
+          "status": "done",
+          "started_at": "2026-11-03T15:41:15.600000Z",
+          "finished_at": "2026-11-03T15:41:31.800000Z",
+          "duration_ms": 16200,
+          "counts": {
+            "written": 12,
+            "total": 12
+          },
+          "progress": null,
+          "detail": "Muse Spark Open on Baseten wrote 12 items",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "ground_defects",
+          "label": "Outlining each defect",
+          "status": "done",
+          "started_at": "2026-11-03T15:41:31.800000Z",
+          "finished_at": "2026-11-03T15:41:41.400000Z",
+          "duration_ms": 9600,
+          "counts": {
+            "outlined": 9
+          },
+          "progress": null,
+          "detail": "SAM 3.1 outlined 9 defects",
+          "model_label": "SAM 3.1",
+          "message": null
+        },
+        {
+          "stage": "verify",
+          "label": "Checking each item against its photo",
+          "status": "done",
+          "started_at": "2026-11-03T15:41:41.400000Z",
+          "finished_at": "2026-11-03T15:41:56Z",
+          "duration_ms": 14600,
+          "counts": {
+            "checked": 12,
+            "matched": 11,
+            "total": 12
+          },
+          "progress": null,
+          "detail": "11 match the photo and what was said, 1 needs a look",
+          "model_label": "Muse Spark Open on Baseten",
+          "message": null
+        },
+        {
+          "stage": "persist",
+          "label": "Saving the punch list",
+          "status": "done",
+          "started_at": "2026-11-03T15:41:56Z",
+          "finished_at": "2026-11-03T15:41:56.600000Z",
+          "duration_ms": 600,
+          "counts": {},
+          "progress": null,
+          "detail": "Saved",
+          "model_label": null,
+          "message": null
+        }
+      ],
+      "media": {
+        "display_mp4": "/media/walks/wlk_2b_first/display.mp4",
+        "poster": "/media/walks/wlk_2b_first/poster.jpg"
+      },
+      "duration_s": 153.5,
+      "fps": 30.0,
+      "width": 1080,
+      "height": 1920,
+      "orientation": "portrait",
+      "device": "glasses",
+      "error": null,
+      "counts": {
+        "items": 12,
+        "points": 11,
+        "turns": 21,
+        "needs_review": 2,
+        "signed_off": 6,
+        "still_open": 4,
+        "not_checked": 0
+      }
+    }
+  ]
+}
