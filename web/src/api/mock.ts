@@ -226,6 +226,10 @@ export function createMockApi(loader: MockLoader = fetchLoader, initial: Partial
         return { projects: await Promise.all(list.projects.map(withLiveCounts)) };
       }),
 
+    createProject: () => answer(async () => {
+      throw new ApiError(400, 'Creating projects is not available in the demo data.');
+    }),
+
     project: (id) => answer(async () => withLiveCounts(await load<ProjectOut>(`projects/${id}.json`))),
 
     items: (id, filters = {}) => answer(async () => applyFilters(await projectItems(id), id, filters)),

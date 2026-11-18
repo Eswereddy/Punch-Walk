@@ -10,7 +10,7 @@ import {
 import { ApiError, type UploadProgress, type UploadRequest } from './api';
 import { api } from './client';
 import { filtersKey, type ItemFilters } from './filters';
-import type { Channel, DispatchCreate, ItemOut, ItemPatch, JobProgressOut, Trade } from './types';
+import type { Channel, DispatchCreate, ItemOut, ItemPatch, JobProgressOut, ProjectCreate, Trade } from './types';
 
 export const qk = {
   health: () => ['health'] as const,
@@ -47,6 +47,13 @@ const on = (...ids: (string | undefined | null)[]) => ids.every(Boolean);
 
 export const useHealth = () => useQuery({ queryKey: qk.health(), queryFn: () => api.health() });
 export const useProjects = () => useQuery({ queryKey: qk.projects(), queryFn: () => api.projects() });
+export function useCreateProject() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (body: ProjectCreate) => api.createProject(body),
+    onSuccess: () => qc.invalidateQueries({ queryKey: qk.projects() }),
+  });
+}
 export const useProject = (id: string | undefined) =>
   useQuery({ queryKey: qk.project(id ?? ''), queryFn: () => api.project(id!), enabled: on(id) });
 

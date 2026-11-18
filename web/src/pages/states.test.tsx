@@ -47,14 +47,14 @@ describe('screen states', () => {
   it('says so when the server has no project yet, instead of loading forever', async () => {
     setApi({ ...diskMock().api, projects: async () => ({ projects: [] }) } as Api);
     renderAt('/trades');
-    expect(await screen.findByText('There’s no project here yet.')).toBeInTheDocument();
+    expect(await screen.findByText('Create your first project')).toBeInTheDocument();
   });
 
   it('shows no demo banner on an empty server, even in a demo session', async () => {
     sessionStorage.setItem('punchwalk.demo', '1');
     setApi({ ...diskMock().api, projects: async () => ({ projects: [] }) } as Api);
     renderAt('/');
-    expect(await screen.findByText('There’s no project here yet.')).toBeInTheDocument();
+    expect(await screen.findByText('Create your first project')).toBeInTheDocument();
     expect(screen.queryByText('This is a demo project.', { exact: false })).toBeNull();
     sessionStorage.clear();
   });

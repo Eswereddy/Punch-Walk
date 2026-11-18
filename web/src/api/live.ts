@@ -77,6 +77,7 @@ function uploadXhr(projectId: string, req: UploadRequest, onProgress?: UploadPro
 export const liveApi: Api = {
   health: () => get('/healthz'),
   projects: () => get('/api/projects'),
+  createProject: (body) => send('POST', '/api/projects', body),
   project: (id) => get(`/api/projects/${enc(id)}`),
   items: (id, filters = {}) => {
     const qs = filtersToSearchParams(filters).toString();

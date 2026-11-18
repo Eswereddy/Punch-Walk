@@ -16,6 +16,7 @@ import type {
   OverlayOut,
   ProcessingSummaryOut,
   ProjectListOut,
+  ProjectCreate,
   ProjectOut,
   RewalkSummaryOut,
   ShareItemOut,
@@ -41,6 +42,7 @@ export type UploadProgress = (fraction: number) => void;
 export interface Api {
   health(): Promise<HealthOut>;
   projects(): Promise<ProjectListOut>;
+  createProject(body: ProjectCreate): Promise<ProjectOut>;
   project(projectId: string): Promise<ProjectOut>;
   items(projectId: string, filters?: ItemFilters): Promise<ItemListOut>;
   item(itemId: string): Promise<ItemOut>;
