@@ -47,7 +47,7 @@ class Settings(BaseSettings):
     SPARK_FALLBACK_MODEL: str = "muse-spark-1.3"
     GEMINI_API_BASE: str = "https://generativelanguage.googleapis.com/v1beta/openai/"
     GEMINI_NATIVE_BASE: str = "https://generativelanguage.googleapis.com/v1beta"
-    GEMINI_MODEL: str = "gemini-2.5-flash"
+    GEMINI_MODEL: str = "gemini-3.8-flash"
     SAM_MODEL: str = "sam-3.1"
     ASR_MODEL: str = "muse-voice-transcribe-1.0"
     HTTP_TIMEOUT_S: float = 300.0
